@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hridoy | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Roboto+Mono:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Highlight active nav link on scroll
+    document.addEventListener('DOMContentLoaded', function () {
+      const links = document.querySelectorAll('.navbar-link');
+      const sections = Array.from(links).map(link => document.querySelector(link.getAttribute('href')));
+      function onScroll() {
+        let scrollPos = window.scrollY + 80;
+        let activeIdx = 0;
+        for (let i = 0; i < sections.length; i++) {
+          if (sections[i] && sections[i].offsetTop <= scrollPos) {
+            activeIdx = i;
+          }
+        }
+        links.forEach((l, i) => l.classList.toggle('active', i === activeIdx));
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // Handle CV download click
+      const cvLink = document.querySelector('.navbar-cv-link');
+      if (cvLink) {
+        cvLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          alert('CV not available right now. Please contact Hridoy through hridoyahmedddd@gmail.com');
+        });
+      }
+
+      // Handle contact form submission
+      const contactForm = document.querySelector('.contact-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          
+          const submitBtn = contactForm.querySelector('button[type="submit"]');
+          const originalText = submitBtn.textContent;
+          
+          // Get form data
+          const formData = new FormData(contactForm);
+          const name = formData.get('name');
+          const email = formData.get('email');
+          const message = formData.get('message');
+          
+          // Validate fields
+          if (!name || !email || !message) {
+            alert('Please fill in all fields.');
+            return;
+          }
+          
+          // Show loading state
+          submitBtn.textContent = 'Sending...';
+          submitBtn.disabled = true;
+          
+          try {
+            // Using Formspree service (you'll need to sign up at formspree.io)
+            const response = await fetch('https://formspree.io/f/mqabpdla', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                name: name,
+                email: email,
+                message: message,
+                _replyto: email
+              })
+            });
+            
+            if (response.ok) {
+              alert('Message sent successfully! Thank you for reaching out.');
+              contactForm.reset();
+            } else {
+              throw new Error('Failed to send message');
+            }
+          } catch (error) {
+            console.error('Error:', error);
+            alert('Failed to send message. Please try again or contact directly at hridoyahmedddd@gmail.com');
+          } finally {
+            // Reset button state
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          }
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <!-- Background grid and dots -->
+  <div class="bg-grid"></div>
+  <div class="bg-dots">
+    <div class="bg-dot" style="width:10px;height:10px;left:12vw;top:22vh;animation-delay:0s;"></div>
+    <div class="bg-dot" style="width:7px;height:7px;left:80vw;top:18vh;animation-delay:1.2s;"></div>
+    <div class="bg-dot" style="width:8px;height:8px;left:60vw;top:60vh;animation-delay:2.1s;"></div>
+    <div class="bg-dot" style="width:6px;height:6px;left:30vw;top:80vh;animation-delay:2.8s;"></div>
+    <div class="bg-dot" style="width:12px;height:12px;left:70vw;top:40vh;animation-delay:0.7s;"></div>
+    <div class="bg-dot" style="width:9px;height:9px;left:20vw;top:60vh;animation-delay:3.5s;"></div>
+    <div class="bg-dot" style="width:7px;height:7px;left:50vw;top:10vh;animation-delay:4.2s;"></div>
+    <div class="bg-dot" style="width:8px;height:8px;left:85vw;top:80vh;animation-delay:5.1s;"></div>
+    <div class="bg-dot" style="width:6px;height:6px;left:40vw;top:30vh;animation-delay:1.7s;"></div>
+    <div class="bg-dot" style="width:10px;height:10px;left:10vw;top:70vh;animation-delay:3.9s;"></div>
+    <div class="bg-dot" style="width:8px;height:8px;left:35vw;top:15vh;animation-delay:2.5s;"></div>
+    <div class="bg-dot" style="width:7px;height:7px;left:75vw;top:65vh;animation-delay:1.9s;"></div>
+    <div class="bg-dot" style="width:9px;height:9px;left:55vw;top:45vh;animation-delay:3.2s;"></div>
+    <div class="bg-dot" style="width:6px;height:6px;left:15vw;top:35vh;animation-delay:4.7s;"></div>
+    <div class="bg-dot" style="width:10px;height:10px;left:90vw;top:55vh;animation-delay:2.3s;"></div>
+  </div>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#hero" class="navbar-logo">Hridoy</a>
+      <div style="display: flex; align-items: center;">
+        <div class="navbar-links">
+          <a href="#about" class="navbar-link">About</a>
+          <a href="#skills" class="navbar-link">Skills</a>
+          <a href="#projects" class="navbar-link">Projects</a>
+          <a href="#contact" class="navbar-link">Contact</a>
+        </div>
+        <div class="navbar-socials">
+          <!-- Download CV button -->
+          <a class="navbar-cv-link" href="#" aria-label="Download CV">
+            <span class="navbar-cv-icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M11 3V15M11 15L6.5 10.5M11 15L15.5 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="3" y="17" width="16" height="2" rx="1" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="navbar-cv-text">Download CV</span>
+          </a>
+          <!-- LinkedIn -->
+          <a class="navbar-social-link" href="https://www.linkedin.com/in/smmua/" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm15.5 11.27h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.76 1.37-1.56 2.82-1.56 3.01 0 3.57 1.98 3.57 4.56v5.64z"/>
+            </svg>
+          </a>
+          <!-- GitHub -->
+          <a class="navbar-social-link" href="https://github.com/hrid0yyy" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.45.11-3.02 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 2.92-.39c.99.01 1.99.13 2.92.39 2.22-1.49 3.2-1.18 3.2-1.18.63 1.57.23 2.73.11 3.02.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.79 1.09.79 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.67.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/>
+            </svg>
+          </a>
+         
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <section class="hero" id="hero">
+      <img src="profile.jpg" alt="Profile" class="about-profile-img" />
+      <h1>Hi, I'm Hridoy</h1>
+      <h2>Computer Science Student &mdash; Data Science &amp; Machine Learning Enthusiast</h2>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="section-title accent1">About Me</div>
+      <div class="about-container">
+        <div class="about-content">
+          <div class="about-intro">
+            <div class="about-name">S. M. Mahbub Uddin Ahmed</div>
+            <div class="about-title">Computer Science Student</div>
+            <div class="about-university">United International University</div>
+          </div>
+          
+          <div class="about-text">
+            I am a passionate and driven Computer Science student specializing in <span class="about-highlight">Data Science and Machine Learning</span>. My journey in tech is fueled by curiosity and a desire to turn data into meaningful solutions that impact the real world.
+            <br><br>
+            I thrive on exploring new technologies, building intelligent systems, and collaborating on innovative projects. My academic background has given me a strong foundation in mathematics, statistics, and programming, and I am always eager to learn more.
+          </div>
+          
+          <div class="about-details">
+            <div class="about-education">
+              <div class="about-section-title">
+                <span class="about-section-icon">🎓</span>
+                Academic Background
+              </div>
+              <ul>
+                <li>
+                  <strong>BSc in Computer Science &amp; Engineering</strong> (Major: Data Science)<br>
+                  United International University
+                </li>
+                <li>
+                  <strong>HSC</strong> — BAF Shaheen College 
+                  <span class="about-gpa">GPA: 5.00</span>
+                </li>
+                <li>
+                  <strong>SSC</strong> — South Point School &amp; College 
+                  <span class="about-gpa">GPA: 5.00</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="about-interests">
+              <div class="about-section-title">
+                <span class="about-section-icon">💡</span>
+                Areas of Interest
+              </div>
+              <ul>
+                <li>Natural Language Processing (NLP)</li>
+                <li>Large Language Models (LLMs)</li>
+                <li>Computer Vision</li>
+                <li>MLOps &amp; ML Systems</li>
+                <li>Full Stack Development</li>
+                <li>Mobile App Development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiences" class="experience-section">
+      <div class="section-title accent1">Experiences</div>
+      <ul class="experience-list">
+        <li class="experience-item">
+          <div class="experience-role">Undergraduate Teaching Assistant</div>
+          <div class="experience-org">United International University</div>
+          <div class="experience-desc">
+            Assisted faculty in teaching undergraduate courses, supporting students in understanding core computer science and data science concepts, and helping with lab sessions and assignments.
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="skills" class="skills-section">
+      <div class="section-title accent2">Skills &amp; Expertise</div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🤖</div>
+          <div class="skill-title">NLP, LLMs &amp; Multimodal ML</div>
+          <div class="skill-desc">
+            Advanced work in Natural Language Processing, Large Language Models, Computer Vision, and Multimodal ML development.
+          </div>
+          <div class="skills-badges">
+            <span class="skill-badge">NLP</span>
+            <span class="skill-badge">LLMs</span>
+            <span class="skill-badge">Vision</span>
+            <span class="skill-badge">Multimodal</span>
+            <span class="skill-badge">Deep Learning</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">⚙️</div>
+          <div class="skill-title">MLOps &amp; ML Systems</div>
+          <div class="skill-desc">
+            End-to-end ML pipelines, MLOps, A2A, MCP Server, scalable deployment and automation.
+          </div>
+          <div class="skills-badges">
+            <span class="skill-badge">MLOps</span>
+            <span class="skill-badge">A2A</span>
+            <span class="skill-badge">MCP Server</span>
+            <span class="skill-badge">CI/CD</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🐍</div>
+          <div class="skill-title">Python &amp; Data Science</div>
+          <div class="skill-desc">
+            Data wrangling, analysis, and modeling with Python, NumPy, Pandas, Scikit-learn, and more.
+          </div>
+          <div class="skills-badges">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">NumPy</span>
+            <span class="skill-badge">Pandas</span>
+            <span class="skill-badge">scikit-learn</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <div class="skill-title">Data Visualization</div>
+          <div class="skill-desc">
+            Visualizing insights using Matplotlib, Seaborn, and interactive dashboards.
+          </div>
+          <div class="skills-badges">
+            <span class="skill-badge">Matplotlib</span>
+            <span class="skill-badge">Seaborn</span>
+            <span class="skill-badge">Dashboards</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🌐</div>
+          <div class="skill-title">Web Development</div>
+          <div class="skill-desc">
+            Modern web apps with Next.js, React, HTML, CSS, and JavaScript.
+          </div>
+          <div class="skills-badges">
+            <span class="skill-badge">Next.js</span>
+            <span class="skill-badge">React</span>
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">CSS</span>
+            <span class="skill-badge">JS</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📱</div>
+          <div class="skill-title">Mobile App Development</div>
+          <div class="skill-desc">
+            Cross-platform mobile apps using React Native.
+          </div>
+          <div class="skills-badges">
+            <span class="skill-badge">React Native</span>
+            <span class="skill-badge">Expo</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🗄️</div>
+          <div class="skill-title">Databases</div>
+          <div class="skill-desc">
+            Experience with SQL and NoSQL databases for scalable data storage.
+          </div>
+          <div class="skills-badges">
+            <span class="skill-badge">SQL</span>
+            <span class="skill-badge">MongoDB</span>
+          </div>
+        </div>
+      </div>
+ 
+    </section>
+
+    <section id="projects">
+      <div class="section-title accent1">Projects</div>
+      <div class="projects-grid">
+        <div class="project-card" style="border-left: 4px solid var(--accent1); box-shadow: 0 4px 24px #00e6ff22;">
+          <div class="project-title" style="font-size:1.35rem;letter-spacing:0.5px;">BornoNet</div>
+          <div class="project-desc" style="font-size:1.05rem;line-height:1.7;">
+            <span style="color:var(--accent2);font-weight:600;">Bengali Speech Recognition Model</span><br>
+            <span style="color:var(--muted);">
+              A fine-tuned <b>Wav2Vec2</b> model for classifying Bengali speech into ~50 unique characters. Trained on ~25,625 audio samples, achieving <b>~87.5% test accuracy</b>. Deployed on <b>Hugging Face</b> with Gradio Space for interactive inference.
+            </span>
+            <br>
+            <a href="https://huggingface.co/hrid0yyy/BornoNet"
+               target="_blank"
+               class="project-link"
+               aria-label="View BornoNet Demo">
+              <span class="project-link-icon" aria-hidden="true" style="vertical-align:middle;display:inline-block;margin-right:0.3em;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="display:inline;">
+                  <path d="M7 13L13 7M13 7H8M13 7V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span style="vertical-align:middle;">View Source Code</span>
+            </a>
+          </div>
+        </div>
+        <div class="project-card" style="border-left: 4px solid var(--accent2); box-shadow: 0 4px 24px #ff6bcb22;">
+          <div class="project-title" style="font-size:1.35rem;letter-spacing:0.5px;">Shelf To Tales</div>
+          <div class="project-desc" style="font-size:1.05rem;line-height:1.7;">
+            <span style="color:var(--accent1);font-weight:600;">Online Bookstore App</span><br>
+            <span style="color:var(--muted);">
+              Built with <b>React Native</b> and <b>Supabase</b> for database management.<br>
+              Features user authentication, book catalog, cart, and order management.
+            </span>
+            <br>
+            <a href="https://github.com/hrid0yyy/shelft-to-tales"
+               target="_blank"
+               class="project-link"
+               aria-label="View Shelf To Tales Source Code">
+              <span class="project-link-icon" aria-hidden="true" style="vertical-align:middle;display:inline-block;margin-right:0.3em;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="display:inline;">
+                  <path d="M7 13L13 7M13 7H8M13 7V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span style="vertical-align:middle;">View Source Code</span>
+            </a>
+          </div>
+        </div>
+        <div class="project-card" style="border-left: 4px solid var(--accent1); box-shadow: 0 4px 24px #00e6ff22;">
+          <div class="project-title" style="font-size:1.35rem;letter-spacing:0.5px;">Event Management Website for University Club Forums</div>
+          <div class="project-desc" style="font-size:1.05rem;line-height:1.7;">
+            <span style="color:var(--accent2);font-weight:600;">University Club Event Platform</span><br>
+            <span style="color:var(--muted);">
+              Developed using <b>PHP</b>. Enables club admins to create/manage events, forums, and announcements for university communities.
+            </span>
+            <br>
+            <a href="https://github.com/hrid0yyy/University-Eventmanagement"
+               target="_blank"
+               class="project-link"
+               aria-label="View Event Management Source Code">
+              <span class="project-link-icon" aria-hidden="true" style="vertical-align:middle;display:inline-block;margin-right:0.3em;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="display:inline;">
+                  <path d="M7 13L13 7M13 7H8M13 7V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span style="vertical-align:middle;">View Source Code</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-title accent2">Contact</div>
+      <div class="contact-section-centered">
+        <form class="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <div class="contact-note">
+          <span>Feel free to reach out for collaboration, questions, or just to say hi!</span>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    &copy; 2024 Hridoy &mdash; Data Science Portfolio. Made with ❤️ | 
+    <a href="#hero">Back to top</a>
+  </footer>
+</body>
+</html>
