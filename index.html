@@ -2,516 +2,410 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hridoy | Portfolio</title>
+  <title>Hridoy | Software Engineer Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Roboto+Mono:400,700&display=swap" rel="stylesheet">
+  <meta name="description" content="S. M. Mahbub Uddin Ahmed (Hridoy) - Software Engineer specializing in Backend Development and Cloud Technologies">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
-  
-  <style>
-   
-    .about-container {
-      display: flex;
-      gap: 40px;
-      align-items: flex-start;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .about-content {
-      flex: 2;
-    }
-
-    .about-image-container {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding-top: 5px;
-    }
-
-    .about-secondary-img {
-      width: 100%;
-      max-width: 300px;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .about-secondary-img:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-    }
-
-    .about-details {
-      display: flex;
-      gap: 40px;
-      max-width: 1200px;
-      margin: 40px auto 0 auto;
-      padding: 0 20px;
-    }
-
-    .about-education,
-    .about-interests {
-      flex: 1;
-    }
-
-    @media (max-width: 768px) {
-      .about-container {
-        flex-direction: column;
-        gap: 30px;
-      }
-      
-      .about-image-container {
-        align-items: center;
-        padding-top: 0;
-      }
-      
-      .about-secondary-img {
-        max-width: 250px;
-        height: 320px;
-      }
-
-      .about-details {
-        flex-direction: column;
-        gap: 30px;
-        margin-top: 30px;
-        padding: 0 20px;
-      }
-    }
-
-    /* Contact Social Section Styles */
-    .contact-social-section {
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    .contact-social-section h3 {
-      font-size: 1.4em;
-      color: #667eea;
-      margin-bottom: 25px;
-      font-weight: 600;
-    }
-
-    /* ...existing code... */
-  </style>
 </head>
 <body>
-  <!-- Background grid and dots -->
-  <div class="bg-grid"></div>
-  <div class="bg-dots">
-    <div class="bg-dot" style="width:10px;height:10px;left:12vw;top:22vh;animation-delay:0s;"></div>
-    <div class="bg-dot" style="width:7px;height:7px;left:80vw;top:18vh;animation-delay:1.2s;"></div>
-    <div class="bg-dot" style="width:8px;height:8px;left:60vw;top:60vh;animation-delay:2.1s;"></div>
-    <div class="bg-dot" style="width:6px;height:6px;left:30vw;top:80vh;animation-delay:2.8s;"></div>
-    <div class="bg-dot" style="width:12px;height:12px;left:70vw;top:40vh;animation-delay:0.7s;"></div>
-    <div class="bg-dot" style="width:9px;height:9px;left:20vw;top:60vh;animation-delay:3.5s;"></div>
-    <div class="bg-dot" style="width:7px;height:7px;left:50vw;top:10vh;animation-delay:4.2s;"></div>
-    <div class="bg-dot" style="width:8px;height:8px;left:85vw;top:80vh;animation-delay:5.1s;"></div>
-    <div class="bg-dot" style="width:6px;height:6px;left:40vw;top:30vh;animation-delay:1.7s;"></div>
-    <div class="bg-dot" style="width:10px;height:10px;left:10vw;top:70vh;animation-delay:3.9s;"></div>
-    <div class="bg-dot" style="width:8px;height:8px;left:35vw;top:15vh;animation-delay:2.5s;"></div>
-    <div class="bg-dot" style="width:7px;height:7px;left:75vw;top:65vh;animation-delay:1.9s;"></div>
-    <div class="bg-dot" style="width:9px;height:9px;left:55vw;top:45vh;animation-delay:3.2s;"></div>
-    <div class="bg-dot" style="width:6px;height:6px;left:15vw;top:35vh;animation-delay:4.7s;"></div>
-    <div class="bg-dot" style="width:10px;height:10px;left:90vw;top:55vh;animation-delay:2.3s;"></div>
+  <!-- Animated Background -->
+  <div class="bg-gradient"></div>
+  <div class="bg-particles">
+    <div class="particle" style="--x: 10%; --y: 20%; --duration: 20s; --delay: 0s;"></div>
+    <div class="particle" style="--x: 80%; --y: 15%; --duration: 25s; --delay: 2s;"></div>
+    <div class="particle" style="--x: 60%; --y: 70%; --duration: 22s; --delay: 4s;"></div>
+    <div class="particle" style="--x: 30%; --y: 80%; --duration: 18s; --delay: 1s;"></div>
+    <div class="particle" style="--x: 90%; --y: 50%; --duration: 24s; --delay: 3s;"></div>
+    <div class="particle" style="--x: 20%; --y: 60%; --duration: 21s; --delay: 5s;"></div>
+    <div class="particle" style="--x: 70%; --y: 30%; --duration: 19s; --delay: 2.5s;"></div>
+    <div class="particle" style="--x: 45%; --y: 90%; --duration: 23s; --delay: 1.5s;"></div>
   </div>
 
-  <div class="container">
-    <section class="hero" id="home" style="height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative; top: -220px;">
-      <img src="profile.jpg" alt="Profile" class="about-profile-img" />
-      <h1 style="margin: 20px 0 10px 0;">Hi, I'm Hridoy</h1>
-      <h2 style="margin: 0;">Computer Science Student &mdash; Data Science &amp; Machine Learning Enthusiast</h2>
-    </section>
-
-    <section id="about" class="about-section">
-      <div class="section-title accent1">About Me</div>
-      <div class="about-container">
-        <div class="about-content">
-       
-          
-          <div class="about-text">
-            My name is S. M. Mahbub Uddin Ahmed. I am a passionate and driven Computer Science student specializing in <span class="about-highlight">Data Science and Machine Learning</span>. My journey in tech is fueled by curiosity and a desire to turn data into meaningful solutions that impact the real world.
-            <br><br>
-            I thrive on exploring new technologies, building intelligent systems, and collaborating on innovative projects. My academic background has given me a strong foundation in mathematics, statistics, and programming, and I am always eager to learn more.
+  <div class="main-container">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-greeting">Hello, I'm</span>
+          <h1 class="hero-name">S. M. Mahbub Uddin Ahmed</h1>
+          <h2 class="hero-title">Software Engineer </h2>
+          <p class="hero-subtitle">Backend Developer • Cloud Architect • AI Architect</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">Get In Touch</a>
+            <a href="#projects" class="btn btn-secondary">View Projects</a>
+          </div>
+          <div class="hero-stats">
+           
           </div>
         </div>
-        
-        <div class="about-image-container">
-          <img src="about-pic.jpg" alt="About Hridoy" class="about-secondary-img" />
+        <div class="hero-image">
+          <div class="image-wrapper">
+            <img src="about-pic.jpg" alt="Hridoy - Software Engineer" class="profile-img" />
+            <div class="image-decoration"></div>
+          </div>
         </div>
       </div>
+     
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <span class="section-tag">Introduction</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-text-wrapper">
+          <p>
+            I am a passionate <span class="highlight">Software Engineer</span> and Computer Science student with a strong focus on 
+            <span class="highlight">Backend development</span>, <span class="highlight">cloud technologies</span>, and 
+            <span class="highlight">AI Solutions</span>. My journey in tech is driven by curiosity and a commitment to 
+            building scalable, efficient solutions.
+          </p>
+          <p>
+            With hands-on experience in modern frameworks and cloud platforms, I specialize in creating robust applications 
+            using ASP.NET Core, Entity Framework, and various database technologies. I'm also deeply invested in 
+            <span class="highlight">competitive programming</span>, having solved over 100 problems on LeetCode and actively 
+            participating in Codeforces competitions.
+          </p>
       
-      <div class="about-details">
-        <div class="about-education">
-          <div class="about-section-title">
-            <span class="about-section-icon">🎓</span>
-            Academic Background
-          </div>
-          <ul>
-            <li>
-              <strong>BSc in Computer Science &amp; Engineering</strong><br>
-              United International University
-            </li>
-            <li>
-              <strong>HSC</strong> — BAF Shaheen College 
-              <span class="about-gpa">GPA: 5.00</span>
-            </li>
-            <li>
-              <strong>SSC</strong> — South Point School 
-              <span class="about-gpa">GPA: 5.00</span>
-            </li>
-          </ul>
         </div>
+        <div class="about-details">
+          <div class="detail-card education-card">
+            <div class="card-header">
+              <span class="card-icon"></span>
+              <h3>Education</h3>
+            </div>
+            <ul class="detail-list">
+              <li>
+                <strong>BSc in Computer Science & Engineering</strong>
+                <span class="institution">United International University</span>
+              </li>
+            </ul>
+          </div>
         
-        <div class="about-interests">
-          <div class="about-section-title">
-            <span class="about-section-icon">💡</span>
-            Areas of Interest
+          
           </div>
-          <ul>
-            <li>Natural Language Processing (NLP)</li>
-            <li>Large Language Models (LLMs)</li>
-            <li>Computer Vision</li>
-            <li>MLOps &amp; ML Systems</li>
-            <li>Full Stack Development</li>
-            <li>Mobile App Development</li>
-          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">Skills &amp; Expertise</h2>
+      </div>
+      <div class="skills-container">
+          <div class="skill-category">
+          <h3 class="category-title">
+            <span class="category-icon"></span>
+            Languages
+          </h3>
+          <div class="skills-grid">
+            <div class="skill-item"><span class="skill-name">C</span></div>
+            <div class="skill-item"><span class="skill-name">C#</span></div>
+            <div class="skill-item"><span class="skill-name">Python</span></div>
+            <div class="skill-item"><span class="skill-name">Java</span></div>
+            <div class="skill-item"><span class="skill-name">Typescript</span></div>
+            <div class="skill-item"><span class="skill-name">Javascript</span></div>
+            <div class="skill-item"><span class="skill-name">SQL</span></div>
+          </div>
+        </div>
+
+
+
+        <div class="skill-category">
+          <h3 class="category-title">
+            <span class="category-icon"></span>
+            Backend Development
+          </h3>
+          <div class="skills-grid">
+            <div class="skill-item"><span class="skill-name">ASP.NET Core</span></div>
+             <div class="skill-item"><span class="skill-name">EF Core</span></div>
+            <div class="skill-item"><span class="skill-name">Node.js</span></div>
+                  <div class="skill-item"><span class="skill-name">FastAPI</span></div>
+            <div class="skill-item"><span class="skill-name">Spring Boot</span></div>
+        
+          </div>
+        </div>
+
+      
+
+        <div class="skill-category">
+          <h3 class="category-title">
+            <span class="category-icon"></span>
+            Databases
+          </h3>
+          <div class="skills-grid">
+            <div class="skill-item"><span class="skill-name">MySQL</span></div>
+            <div class="skill-item"><span class="skill-name">PostgreSQL</span></div>
+            <div class="skill-item"><span class="skill-name">MongoDB</span></div>
+            <div class="skill-item"><span class="skill-name">Redis</span></div>
+                  <div class="skill-item"><span class="skill-name">VectorDB</span></div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title">
+            <span class="category-icon"></span>
+            DevOps &amp; Cloud
+          </h3>
+          <div class="skills-grid">
+            <div class="skill-item"><span class="skill-name">AWS</span></div>
+            <div class="skill-item"><span class="skill-name">Docker</span></div>
+            <div class="skill-item"><span class="skill-name">Kubernetes</span></div>
+            <div class="skill-item"><span class="skill-name">Git</span></div>
+            <div class="skill-item"><span class="skill-name">GitHub</span></div>
+            <div class="skill-item"><span class="skill-name">GitHub Actions</span></div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title">
+            <span class="category-icon"></span>
+            AI &amp; Data Science
+          </h3>
+          <div class="skills-grid">
+            <div class="skill-item"><span class="skill-name">Machine Learning</span></div>
+            <div class="skill-item"><span class="skill-name">NLP</span></div>
+            <div class="skill-item"><span class="skill-name">Computer Vision</span></div>
+            <div class="skill-item"><span class="skill-name">PyTorch</span></div>
+            <div class="skill-item"><span class="skill-name">TensorFlow</span></div>
+            <div class="skill-item"><span class="skill-name">Pandas</span></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="experiences" class="experience-section">
-      <div class="section-title accent1">Experiences</div>
-      <ul class="experience-list">
-        <li class="experience-item">
-          <div class="experience-role">Undergraduate Teaching Assistant</div>
-          <div class="experience-org">United International University</div>
-          <div class="experience-desc">
-            Assisted faculty in teaching undergraduate courses, supporting students in understanding core computer science and data science concepts, and helping with lab sessions and assignments.
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <section id="skills" class="skills-section">
-      <div class="section-title accent2">Skills &amp; Expertise</div>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-icon">🤖</div>
-          <div class="skill-title">NLP, LLMs &amp; Multimodal ML</div>
-          <div class="skill-desc">
-            Advanced work in Natural Language Processing, Large Language Models, Computer Vision, and Multimodal ML development.
-          </div>
-          <div class="skills-badges">
-            <span class="skill-badge">NLP</span>
-            <span class="skill-badge">LLMs</span>
-            <span class="skill-badge">Vision</span>
-            <span class="skill-badge">Multimodal</span>
-            <span class="skill-badge">Deep Learning</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">⚙️</div>
-          <div class="skill-title">MLOps &amp; ML Systems</div>
-          <div class="skill-desc">
-            End-to-end ML pipelines, MLOps, A2A, MCP Server, scalable deployment and automation.
-          </div>
-          <div class="skills-badges">
-            <span class="skill-badge">MLOps</span>
-            <span class="skill-badge">A2A</span>
-            <span class="skill-badge">MCP Server</span>
-            <span class="skill-badge">CI/CD</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">🐍</div>
-          <div class="skill-title">Python &amp; Data Science</div>
-          <div class="skill-desc">
-            Data wrangling, analysis, and modeling with Python, NumPy, Pandas, Scikit-learn, and more.
-          </div>
-          <div class="skills-badges">
-            <span class="skill-badge">Python</span>
-            <span class="skill-badge">NumPy</span>
-            <span class="skill-badge">Pandas</span>
-            <span class="skill-badge">scikit-learn</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">📊</div>
-          <div class="skill-title">Data Visualization</div>
-          <div class="skill-desc">
-            Visualizing insights using Matplotlib, Seaborn, and interactive dashboards.
-          </div>
-          <div class="skills-badges">
-            <span class="skill-badge">Matplotlib</span>
-            <span class="skill-badge">Seaborn</span>
-            <span class="skill-badge">Dashboards</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">🌐</div>
-          <div class="skill-title">Web Development</div>
-          <div class="skill-desc">
-            Modern web apps with Next.js, React, HTML, CSS, and JavaScript.
-          </div>
-          <div class="skills-badges">
-            <span class="skill-badge">Next.js</span>
-            <span class="skill-badge">React</span>
-            <span class="skill-badge">HTML</span>
-            <span class="skill-badge">CSS</span>
-            <span class="skill-badge">JS</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">📱</div>
-          <div class="skill-title">Mobile App Development</div>
-          <div class="skill-desc">
-            Cross-platform mobile apps using React Native.
-          </div>
-          <div class="skills-badges">
-            <span class="skill-badge">React Native</span>
-            <span class="skill-badge">Expo</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">🗄️</div>
-          <div class="skill-title">Databases</div>
-          <div class="skill-desc">
-            Experience with SQL and NoSQL databases for scalable data storage.
-          </div>
-          <div class="skills-badges">
-            <span class="skill-badge">SQL</span>
-            <span class="skill-badge">MongoDB</span>
+    <!-- Experience Section -->
+    <section id="experiences" class="section">
+      <div class="section-header">
+        <span class="section-tag">Work History</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Present</span>
+            <h3 class="timeline-title">Undergraduate Teaching Assistant</h3>
+            <p class="timeline-company">United International University</p>
+            <p class="timeline-desc">
+              Assisting faculty in teaching undergraduate courses, supporting students in understanding core 
+              computer science and data science concepts, helping with lab sessions and assignments, and 
+              providing one-on-one mentoring to students.
+            </p>
           </div>
         </div>
       </div>
- 
     </section>
 
-    <section id="projects">
-      <div class="section-title accent1">Projects</div>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
       <div class="projects-grid">
-        <div class="project-card" style="border-left: 4px solid var(--accent1); box-shadow: 0 4px 24px #00e6ff22;">
-          <div class="project-title" style="font-size:1.35rem;letter-spacing:0.5px;">BornoNet</div>
-          <div class="project-desc" style="font-size:1.05rem;line-height:1.7;">
-            <span style="color:var(--accent1);font-weight:600;">Bengali Speech Recognition Model</span><br>
-            <span style="color:var(--muted);">
-              A fine-tuned <b>Wav2Vec2</b> model for classifying Bengali speech into ~50 unique characters. Trained on ~25,625 audio samples, achieving <b>~87.5% test accuracy</b>. Deployed on <b>Hugging Face</b> with Gradio Space for interactive inference.
-            </span>
-            <br>
-            <a href="https://huggingface.co/hrid0yyy/BornoNet"
-               target="_blank"
-               class="project-link"
-               aria-label="View BornoNet Demo">
-              <span class="project-link-icon" aria-hidden="true" style="vertical-align:middle;display:inline-block;margin-right:0.3em;">
-                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="display:inline;">
-                  <path d="M7 13L13 7M13 7H8M13 7V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <article class="project-card featured">
+          <div class="project-header">
+            <span class="project-type">Machine Learning</span>
+            <div class="project-links">
+              <a href="https://huggingface.co/hrid0yyy/BornoNet" target="_blank" class="project-link-btn" aria-label="View Demo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
                 </svg>
-              </span>
-              <span style="vertical-align:middle;">View Source Code</span>
-            </a>
+              </a>
+            </div>
           </div>
-        </div>
-        
-        <div class="project-card" style="border-left: 4px solid var(--accent2); box-shadow: 0 4px 24px #ff6bcb22;">
-          <div class="project-title" style="font-size:1.35rem;letter-spacing:0.5px;">RAGQNA</div>
-          <div class="project-desc" style="font-size:1.05rem;line-height:1.7;">
-            <span style="color:var(--accent1);font-weight:600;">RAG-based Question Answering System</span><br>
-            <span style="color:var(--muted);">
-              A sophisticated <b>Retrieval Augmented Generation</b> system that combines document retrieval with LLM capabilities for accurate question answering. Features advanced vector search, context retrieval, and intelligent response generation using state-of-the-art NLP models.
-            </span>
-            <br>
-            <a href="https://github.com/hrid0yyy/RAGQNA"
-               target="_blank"
-               class="project-link"
-               aria-label="View RAGQNA Source Code">
-              <span class="project-link-icon" aria-hidden="true" style="vertical-align:middle;display:inline-block;margin-right:0.3em;">
-                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="display:inline;">
-                  <path d="M7 13L13 7M13 7H8M13 7V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <h3 class="project-card-title">BornoNet</h3>
+          <p class="project-card-desc">
+            Bengali Speech Recognition Model - A fine-tuned Wav2Vec2 model for classifying Bengali speech 
+            into ~50 unique characters. Achieved ~87.5% test accuracy. Deployed on Hugging Face.
+          </p>
+          <div class="project-tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">Wav2Vec2</span>
+            <span class="tag">Hugging Face</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-type">NLP / AI</span>
+            <div class="project-links">
+              <a href="https://github.com/hrid0yyy/RAGQNA" target="_blank" class="project-link-btn" aria-label="View Source">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
-              </span>
-              <span style="vertical-align:middle;">View Source Code</span>
-            </a>
+              </a>
+            </div>
           </div>
-        </div>
-        
-        <div class="project-card" style="border-left: 4px solid var(--accent1); box-shadow: 0 4px 24px #00e6ff22;">
-          <div class="project-title" style="font-size:1.35rem;letter-spacing:0.5px;">Shelf To Tales</div>
-          <div class="project-desc" style="font-size:1.05rem;line-height:1.7;">
-            <span style="color:var(--accent1);font-weight:600;">Online Bookstore App</span><br>
-            <span style="color:var(--muted);">
-              Built with <b>React Native</b> and <b>Supabase</b> for database management.<br>
-              Features user authentication, book catalog, cart, and order management.
-            </span>
-            <br>
-            <a href="https://github.com/hrid0yyy/shelft-to-tales"
-               target="_blank"
-               class="project-link"
-               aria-label="View Shelf To Tales Source Code">
-              <span class="project-link-icon" aria-hidden="true" style="vertical-align:middle;display:inline-block;margin-right:0.3em;">
-                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="display:inline;">
-                  <path d="M7 13L13 7M13 7H8M13 7V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <h3 class="project-card-title">RAGQNA</h3>
+          <p class="project-card-desc">
+            RAG-based Question Answering System - A sophisticated Retrieval Augmented Generation system 
+            combining document retrieval with LLM capabilities.
+          </p>
+          <div class="project-tags">
+            <span class="tag">RAG</span>
+            <span class="tag">LLM</span>
+            <span class="tag">NLP</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-type">Mobile App</span>
+            <div class="project-links">
+              <a href="https://github.com/hrid0yyy/shelft-to-tales" target="_blank" class="project-link-btn" aria-label="View Source">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
-              </span>
-              <span style="vertical-align:middle;">View Source Code</span>
-            </a>
+              </a>
+            </div>
           </div>
-        </div>
-        
-        <div class="project-card" style="border-left: 4px solid var(--accent2); box-shadow: 0 4px 24px #ff6bcb22;">
-          <div class="project-title" style="font-size:1.35rem;letter-spacing:0.5px;">Event Management Website</div>
-          <div class="project-desc" style="font-size:1.05rem;line-height:1.7;">
-            <span style="color:var(--accent1);font-weight:600;">University Club Event Platform</span><br>
-            <span style="color:var(--muted);">
-              Developed using <b>PHP</b>. Enables club admins to create/manage events, forums, and announcements for university communities.
-            </span>
-            <br>
-            <a href="https://github.com/hrid0yyy/University-Eventmanagement"
-               target="_blank"
-               class="project-link"
-               aria-label="View Event Management Source Code">
-              <span class="project-link-icon" aria-hidden="true" style="vertical-align:middle;display:inline-block;margin-right:0.3em;">
-                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="display:inline;">
-                  <path d="M7 13L13 7M13 7H8M13 7V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <h3 class="project-card-title">Shelf To Tales</h3>
+          <p class="project-card-desc">
+            Online Bookstore App built with React Native and Supabase. Features authentication, 
+            book catalog, cart, and order management.
+          </p>
+          <div class="project-tags">
+            <span class="tag">React Native</span>
+            <span class="tag">Supabase</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-type">Web Development</span>
+            <div class="project-links">
+              <a href="https://github.com/hrid0yyy/University-Eventmanagement" target="_blank" class="project-link-btn" aria-label="View Source">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
-              </span>
-              <span style="vertical-align:middle;">View Source Code</span>
-            </a>
+              </a>
+            </div>
           </div>
-        </div>
+          <h3 class="project-card-title">Event Management Platform</h3>
+          <p class="project-card-desc">
+            University Club Event Platform using PHP. Enables club admins to create/manage 
+            events, forums, and announcements.
+          </p>
+          <div class="project-tags">
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="contact">
-      <div class="section-title accent2">Contact</div>
-      <div class="contact-section-centered">
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <p class="contact-intro">
+            I'm currently looking for new opportunities. Whether you have a question, 
+            a project idea, or just want to say hi, feel free to reach out!
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/hrid0yyy" target="_blank" class="social-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.45.11-3.02 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 2.92-.39c.99.01 1.99.13 2.92.39 2.22-1.49 3.2-1.18 3.2-1.18.63 1.57.23 2.73.11 3.02.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.79 1.09.79 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.67.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/smmua/" target="_blank" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm15.5 11.27h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.76 1.37-1.56 2.82-1.56 3.01 0 3.57 1.98 3.57 4.56v5.64z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://leetcode.com/u/hrid0yy/" target="_blank" class="social-link" aria-label="LeetCode">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.055 5.055 0 0 0-2.445-1.337l2.467-2.503c.516-.514.498-1.366-.037-1.901-.535-.535-1.387-.552-1.902-.038l-10.1 10.101c-.981.982-1.494 2.337-1.494 3.835 0 1.498.513 2.895 1.494 3.875l4.347 4.361c.981.979 2.337 1.452 3.834 1.452s2.853-.512 3.835-1.494l2.609-2.637c.514-.514.496-1.365-.039-1.9s-1.386-.553-1.899-.039zM20.811 13.01H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z"/>
+              </svg>
+              <span>LeetCode</span>
+            </a>
+            <a href="https://codeforces.com/profile/hrid00y" target="_blank" class="social-link" aria-label="Codeforces">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <path d="M4.5 7.5C5.328 7.5 6 8.172 6 9v10.5c0 .828-.672 1.5-1.5 1.5S3 20.328 3 19.5V9c0-.828.672-1.5 1.5-1.5zm15 0C20.328 7.5 21 8.172 21 9v10.5c0 .828-.672 1.5-1.5 1.5S18 20.328 18 19.5V9c0-.828.672-1.5 1.5-1.5zM12 3c.828 0 1.5.672 1.5 1.5v15c0 .828-.672 1.5-1.5 1.5s-1.5-.672-1.5-1.5v-15C10.5 3.672 11.172 3 12 3z"/>
+              </svg>
+              <span>Codeforces</span>
+            </a>
+            <a href="https://www.hackerrank.com/profile/hridoyahmed4141" target="_blank" class="social-link" aria-label="HackerRank">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <path d="M12 0c1.285 0 9.75 4.886 10.392 6 .645 1.115.645 10.885 0 12S13.287 24 12 24s-9.75-4.885-10.395-6c-.641-1.115-.641-10.885 0-12C2.25 4.886 10.715 0 12 0zm2.295 6.799c-.141 0-.258.115-.258.258v3.875H9.963V6.908h.701c.141 0 .254-.115.254-.258 0-.094-.049-.176-.123-.221L9.223 4.92c-.049-.063-.141-.109-.226-.109-.084 0-.16.045-.207.107L7.27 6.434c-.061.049-.1.125-.1.218 0 .141.109.258.254.258h.549v9.592H7.27c-.143 0-.26.115-.26.258 0 .094.051.174.125.221l1.574 1.51c.046.061.14.107.223.107.086 0 .162-.045.209-.107l1.521-1.506c.063-.047.104-.127.104-.219 0-.143-.115-.258-.258-.258h-.549V13.25h4.078v3.463h-.703c-.141 0-.254.115-.254.258 0 .094.047.174.123.219l1.572 1.51c.047.063.141.109.227.109.082 0 .158-.045.205-.107l1.522-1.506c.063-.047.102-.127.102-.219 0-.143-.113-.258-.256-.258h-.551V6.908h.703c.143 0 .256-.115.256-.258 0-.094-.049-.174-.123-.219l-1.576-1.51c-.045-.063-.139-.109-.223-.109-.086 0-.16.045-.207.107l-1.52 1.506c-.064.049-.102.125-.102.218 0 .143.113.258.256.258h.551z"/>
+              </svg>
+              <span>HackerRank</span>
+            </a>
+          </div>
+        </div>
         <form class="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit">Send</button>
-        </form>
-        <div class="contact-note">
-          <span>Feel free to reach out for collaboration, questions, or just to say hi!</span>
-        </div>
-        
-        <!-- Social Links Section -->
-        <div class="contact-social-section">
-          <h3>Connect with me</h3>
-          <div class="contact-social-grid">
-            <a href="https://github.com/hrid0yyy" target="_blank" class="contact-social-item github">
-              <div class="contact-social-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.45.11-3.02 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 2.92-.39c.99.01 1.99.13 2.92.39 2.22-1.49 3.2-1.18 3.2-1.18.63 1.57.23 2.73.11 3.02.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.79 1.09.79 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.67.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/>
-                </svg>
-              </div>
-              <span class="contact-social-label">GitHub</span>
-            </a>
-            
-            <a href="https://www.linkedin.com/in/smmua/" target="_blank" class="contact-social-item linkedin">
-              <div class="contact-social-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm15.5 11.27h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.76 1.37-1.56 2.82-1.56 3.01 0 3.57 1.98 3.57 4.56v5.64z"/>
-                </svg>
-              </div>
-              <span class="contact-social-label">LinkedIn</span>
-            </a>
-            
-            <a href="https://www.facebook.com/hriddoyy" target="_blank" class="contact-social-item facebook">
-              <div class="contact-social-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-              </div>
-              <span class="contact-social-label">Facebook</span>
-            </a>
-            
-            <a href="https://www.instagram.com/hri.doyy/" target="_blank" class="contact-social-item instagram">
-              <div class="contact-social-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-              </div>
-              <span class="contact-social-label">Instagram</span>
-            </a>
-            
-            <a href="https://codeforces.com/profile/hrid00y" target="_blank" class="contact-social-item codeforces">
-              <div class="contact-social-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M4.5 7.5C5.328 7.5 6 8.172 6 9v10.5c0 .828-.672 1.5-1.5 1.5S3 20.328 3 19.5V9c0-.828.672-1.5 1.5-1.5zm15 0C20.328 7.5 21 8.172 21 9v10.5c0 .828-.672 1.5-1.5 1.5S18 20.328 18 19.5V9c0-.828.672-1.5 1.5-1.5zM12 3c.828 0 1.5.672 1.5 1.5v15c0 .828-.672 1.5-1.5 1.5s-1.5-.672-1.5-1.5v-15C10.5 3.672 11.172 3 12 3z"/>
-                </svg>
-              </div>
-              <span class="contact-social-label">Codeforces</span>
-            </a>
-            
-            <a href="https://leetcode.com/u/hrid0yy/" target="_blank" class="contact-social-item leetcode">
-              <div class="contact-social-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 a5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.81 2.133 7.95-.072 2.145-2.206 2.177-5.756.032-7.921l-2.042-2.062a.424.424 0 0 0-.122-.093 3.596 3.596 0 0 1-1.877-.47 3.21 3.21 0 0 1-.656-.598 2.62 2.62 0 0 1-.604-1.48 2.744 2.744 0 0 1 .045-.633c.044-.204.108-.404.19-.592a3.42 3.42 0 0 1 .353-.613 3.218 3.218 0 0 1 .464-.522 3.27 3.27 0 0 1 .542-.39 3.45 3.45 0 0 1 .693-.25 4.262 4.262 0 0 1 .662-.098c.439-.02.877.04 1.295.18.418.14.81.35 1.154.622.343.272.637.597.863.96.225.364.384.76.471 1.173.088.414.105.84.051 1.259-.055.42-.166.826-.33 1.205-.164.38-.378.732-.636 1.044-.26.313-.561.588-.897.818l-2.842 1.939a.412.412 0 0 0-.16.258.42.42 0 0 0 .022.32c.032.096.081.182.146.253.064.071.142.124.23.157.087.032.18.043.273.032a.42.42 0 0 0 .263-.138l2.26-1.542a5.684 5.684 0 0 0 2.402-2.555 5.85 5.85 0 0 0 .717-1.648 6.01 6.01 0 0 0 .18-1.689 5.98 5.98 0 0 0-.33-1.677 5.75 5.75 0 0 0-.874-1.55 5.525 5.525 0 0 0-1.35-1.264 5.31 5.31 0 0 0-1.728-.665 5.17 5.17 0 0 0-1.825.05 4.82 4.82 0 0 0-1.68.58 4.5 4.5 0 0 0-1.366 1.056 4.27 4.27 0 0 0-.87 1.435 4.09 4.09 0 0 0-.244 1.659 3.46 3.46 0 0 0 .4 1.535 2.84 2.84 0 0 0 .943 1.097c.19.14.394.26.61.359.216.1.445.174.68.22.235.047.474.066.713.058.239-.008.475-.053.7-.135.224-.082.437-.2.631-.35l2.044-2.063a1.615 1.615 0 0 1 2.282 0 1.615 1.615 0 0 1 0 2.282l-4.277 4.193c-1.322 1.276-3.42 1.302-4.77.06l-4.233-4.152a2.862 2.862 0 0 1-.614-.88 2.995 2.995 0 0 1-.169-.522 3.09 3.09 0 0 1-.03-1.108c.024-.19.074-.374.148-.546a2.618 2.618 0 0 1 .6-1.045L9.6 8.26l3.854-4.126A3.3 3.3 0 0 1 15.792 3a3.3 3.3 0 0 1 2.338.97 3.3 3.3 0 0 1 .97 2.338 3.3 3.3 0 0 1-.97 2.338l-2.042 2.063a.424.424 0 0 0 0 .6.424.424 0 0 0 .6 0l2.042-2.063a4.15 4.15 0 0 0 1.22-2.938A4.15 4.15 0 0 0 18.73 3.37 4.15 4.15 0 0 0 15.792 2.15a4.15 4.15 0 0 0-2.938 1.22L9 7.116"/>
-                </svg>
-              </div>
-              <span class="contact-social-label">LeetCode</span>
-            </a>
+          <div class="form-group">
+            <input type="text" name="name" id="name" placeholder=" " required>
+            <label for="name">Your Name</label>
           </div>
-        </div>
-
+          <div class="form-group">
+            <input type="email" name="email" id="email" placeholder=" " required>
+            <label for="email">Your Email</label>
+          </div>
+          <div class="form-group">
+            <textarea name="message" id="message" placeholder=" " rows="5" required></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit">
+            <span>Send Message</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
       </div>
     </section>
-
   </div>
 
-  <!-- Bottom Navigation Bar -->
-  <nav class="bottom-navbar">
-    <a href="#home" class="nav-item">
-      <div class="nav-icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-        </svg>
-      </div>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#home" class="nav-item active" data-tooltip="Home">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+      </svg>
     </a>
-    
-    <a href="#about" class="nav-item">
-      <div class="nav-icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-        </svg>
-      </div>
+    <a href="#about" class="nav-item" data-tooltip="About">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+      </svg>
     </a>
-    
-    <a href="#skills" class="nav-item">
-      <div class="nav-icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-        </svg>
-      </div>
+    <a href="#skills" class="nav-item" data-tooltip="Skills">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      </svg>
     </a>
-    
-    <a href="#projects" class="nav-item">
-      <div class="nav-icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-        </svg>
-      </div>
+    <a href="#projects" class="nav-item" data-tooltip="Projects">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+      </svg>
     </a>
-    
-    <a href="#contact" class="nav-item">
-      <div class="nav-icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-        </svg>
-      </div>
+    <a href="#contact" class="nav-item" data-tooltip="Contact">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
     </a>
   </nav>
 
-
-
+  <!-- Footer -->
   <footer class="footer">
-    &copy; 2025 Hridoy &mdash; Data Science Portfolio. Made with ❤️ | 
-    <a href="#hero">Back to top</a>
+    <p>&copy; 2026 S. M. Mahbub Uddin Ahmed. All rights reserved.</p>
   </footer>
 </body>
 </html>
-
