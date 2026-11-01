@@ -2,406 +2,495 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hridoy | Software Engineer Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="S. M. Mahbub Uddin Ahmed (Hridoy) - Software Engineer specializing in Backend Development and Cloud Technologies">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S. M. Mahbub Uddin Ahmed — Software Engineer &amp; Researcher</title>
+  <meta name="description" content="S. M. Mahbub Uddin Ahmed (Hridoy) — software engineer and researcher in Dhaka. Backend and cloud systems, and machine learning that is measured against a simpler baseline.">
+  <meta name="theme-color" content="#f3f3ef">
+  <script>
+    // Set the theme before first paint so there is no flash of the wrong one.
+    (function () {
+      var theme = 'light';
+      try {
+        var stored = localStorage.getItem('theme');
+        theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      } catch (e) { /* storage blocked: keep light */ }
+      document.documentElement.setAttribute('data-theme', theme);
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', theme === 'dark' ? '#121513' : '#f3f3ef');
+    })();
+  </script>
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="S. M. Mahbub Uddin Ahmed — Software Engineer &amp; Researcher">
+  <meta property="og:description" content="Backend and cloud engineering, plus research on models that do more with less.">
+  <meta property="og:image" content="about-pic.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3">
+  <script src="script.js?v=3" defer></script>
 </head>
 <body>
-  <!-- Animated Background -->
-  <div class="bg-gradient"></div>
-  <div class="bg-particles">
-    <div class="particle" style="--x: 10%; --y: 20%; --duration: 20s; --delay: 0s;"></div>
-    <div class="particle" style="--x: 80%; --y: 15%; --duration: 25s; --delay: 2s;"></div>
-    <div class="particle" style="--x: 60%; --y: 70%; --duration: 22s; --delay: 4s;"></div>
-    <div class="particle" style="--x: 30%; --y: 80%; --duration: 18s; --delay: 1s;"></div>
-    <div class="particle" style="--x: 90%; --y: 50%; --duration: 24s; --delay: 3s;"></div>
-    <div class="particle" style="--x: 20%; --y: 60%; --duration: 21s; --delay: 5s;"></div>
-    <div class="particle" style="--x: 70%; --y: 30%; --duration: 19s; --delay: 2.5s;"></div>
-    <div class="particle" style="--x: 45%; --y: 90%; --duration: 23s; --delay: 1.5s;"></div>
-  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="main-container">
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <div class="hero-text">
-          <span class="hero-greeting">Hello, I'm</span>
-          <h1 class="hero-name">S. M. Mahbub Uddin Ahmed</h1>
-          <h2 class="hero-title">Software Engineer </h2>
-          <p class="hero-subtitle">Backend Developer • Cloud Architect • AI Architect</p>
-          <div class="hero-cta">
-            <a href="#contact" class="btn btn-primary">Get In Touch</a>
-            <a href="#projects" class="btn btn-secondary">View Projects</a>
-          </div>
-          <div class="hero-stats">
-           
-          </div>
+  <header class="topbar">
+    <a class="wordmark" href="#top">S. M. Mahbub Uddin Ahmed</a>
+    <div class="topbar-right">
+      <nav class="nav" aria-label="Sections">
+        <a class="nav-link" href="#research">Research</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#background">Background</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-link nav-cv" href="S-M-Mahbub-Uddin-Ahmed-CV.pdf" target="_blank" rel="noopener">CV</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme">
+        <svg class="icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="icon icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Plate -->
+    <section class="plate" id="top">
+      <div class="plate-inner">
+        <div class="plate-copy">
+          <p class="plate-kicker">Software engineer and researcher, Dhaka</p>
+          <h1 class="plate-name">S. M. Mahbub Uddin Ahmed</h1>
+          <p class="plate-lede">
+            I solve problems: the research that finds an answer, and the backend engineering that
+            turns it into something people can use. The systems I ship are cloud services that hold
+            up under load and stay fast for their users. Currently a software engineering intern at
+            Samsung R&amp;D Institute Bangladesh.
+          </p>
+          <ul class="plate-tags" aria-label="Areas of work">
+            <li>Software engineering</li>
+            <li>NLP</li>
+            <li>Computer vision</li>
+            <li>Agentic systems</li>
+          </ul>
         </div>
-        <div class="hero-image">
-          <div class="image-wrapper">
-            <img src="about-pic.jpg" alt="Hridoy - Software Engineer" class="profile-img" />
-            <div class="image-decoration"></div>
-          </div>
-        </div>
+        <figure class="plate-figure">
+          <img src="about-pic.jpg" alt="Portrait of S. M. Mahbub Uddin Ahmed" width="720" height="900">
+          <figcaption>
+            <span>BSc, Computer Science &amp; Engineering</span>
+            <span>United International University</span>
+          </figcaption>
+        </figure>
       </div>
-     
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-      <div class="section-header">
-        <span class="section-tag">Introduction</span>
-        <h2 class="section-title">About Me</h2>
+    <!-- Research -->
+    <section class="section" id="research">
+      <div class="section-head">
+        <h2>Research</h2>
+        <p class="section-links">
+          <a href="https://scholar.google.com/citations?user=9v4JzRoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://orcid.org/0009-0000-5961-745X" target="_blank" rel="noopener">ORCID 0009-0000-5961-745X</a>
+        </p>
       </div>
-      <div class="about-content">
-        <div class="about-text-wrapper">
-          <p>
-            I am a passionate <span class="highlight">Software Engineer</span> and Computer Science student with a strong focus on 
-            <span class="highlight">Backend development</span>, <span class="highlight">cloud technologies</span>, and 
-            <span class="highlight">AI Solutions</span>. My journey in tech is driven by curiosity and a commitment to 
-            building scalable, efficient solutions.
-          </p>
-          <p>
-            With hands-on experience in modern frameworks and cloud platforms, I specialize in creating robust applications 
-            using ASP.NET Core, Entity Framework, and various database technologies. I'm also deeply invested in 
-            <span class="highlight">competitive programming</span>, having solved over 100 problems on LeetCode and actively 
-            participating in Codeforces competitions.
-          </p>
-      
-        </div>
-        <div class="about-details">
-          <div class="detail-card education-card">
-            <div class="card-header">
-              <h3>Education</h3>
+
+      <ol class="papers">
+        <li class="paper">
+          <div class="paper-meta">
+            <span>Preprint</span>
+            <span>SSRN 7664934</span>
+            <span>2026</span>
+          </div>
+          <div class="paper-body">
+            <h3 class="paper-title">
+              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7664934" target="_blank" rel="noopener">
+                Few-shot classification of rare viruses in transmission electron microscopy images using Siamese neural networks
+              </a>
+            </h3>
+            <p class="paper-abs">
+              Rare viruses come with five to twenty-five micrographs and no trained model. I train a
+              Siamese encoder on the fourteen common classes of the public TEM virus dataset, then add
+              the eight rare classes only at test time, as class prototypes. The encoder never sees them.
+            </p>
+            <dl class="paper-findings">
+              <div>
+                <dt>14-class test accuracy</dt>
+                <dd>94.8%</dd>
+              </div>
+              <div>
+                <dt>Unseen rare classes, one shot</dt>
+                <dd>37.3% <span>against 30.8% for the re-trained baseline</span></dd>
+              </div>
+            </dl>
+            <p class="paper-note">
+              At five shots the baseline edges ahead (67.9% against 64.6%). The gain is in the
+              one-shot regime, and the paper reports it that way.
+            </p>
+            <div class="paper-links">
+              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7664934" target="_blank" rel="noopener">Read preprint</a>
+              <a href="https://github.com/hrid0yyy/tem-virus-siamese-fewshot" target="_blank" rel="noopener">Code and manuscript</a>
+              <button type="button" class="copy-btn" data-cite="Ahmed, S. M. M. U. (2026). Few-shot classification of rare viruses in transmission electron microscopy images using Siamese neural networks [Preprint]. SSRN 7664934. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7664934">Copy citation</button>
             </div>
-            <ul class="detail-list">
+          </div>
+        </li>
+
+        <li class="paper">
+          <div class="paper-meta">
+            <span>Preprint</span>
+            <span>arXiv 2610.15029</span>
+            <span>2026</span>
+          </div>
+          <div class="paper-body">
+            <h3 class="paper-title">
+              <a href="https://arxiv.org/abs/2610.15029" target="_blank" rel="noopener">
+                Is a 9B decision foundation model needed for symptom-to-disease classification? Fine-tuning Clef-Flash against TF&#8209;IDF baselines
+              </a>
+            </h3>
+            <p class="paper-abs">
+              Clef-Flash is a 9B decision foundation model. I fine-tune it with 4-bit QLoRA on the
+              twenty-four-class Symptom2Disease set, then train TF&#8209;IDF linear baselines on exactly the
+              same stratified split. A leave-one-symptom-out ablation on four narratives shows which
+              clause carried each prediction.
+            </p>
+            <dl class="paper-findings">
+              <div>
+                <dt>Clef-Flash, after QLoRA</dt>
+                <dd>95.4% <span>from 65.0% zero-shot</span></dd>
+              </div>
+              <div>
+                <dt>TF&#8209;IDF with a linear SVM</dt>
+                <dd>98.8% <span>at 0.7 ms per record on a laptop CPU</span></dd>
+              </div>
+            </dl>
+            <p class="paper-note">
+              On short, keyword-rich narratives the 9B model offers no accuracy advantage. That is the
+              finding, not a failed training run.
+            </p>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2610.15029" target="_blank" rel="noopener">Read on arXiv</a>
+              <a href="https://github.com/hrid0yyy/clef-clinical-triage" target="_blank" rel="noopener">Code and results</a>
+              <button type="button" class="copy-btn" data-cite="Ahmed, S. M. M. U. (2026). Is a 9B Decision Foundation Model Needed for Symptom-to-Disease Classification? Fine-Tuning Clef-Flash Against TF-IDF Baselines (arXiv:2610.15029). arXiv. https://arxiv.org/abs/2610.15029">Copy citation</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="paper">
+          <div class="paper-meta">
+            <span>Dataset</span>
+            <span>DOI 10.17632/33vjwcrpjj.1</span>
+            <span>2026</span>
+          </div>
+          <div class="paper-body">
+            <h3 class="paper-title">
+              <a href="https://data.mendeley.com/datasets/33vjwcrpjj/1" target="_blank" rel="noopener">
+                BD-BANKNOTES: a multi-series annotated dataset of Bangladeshi banknotes for object detection
+              </a>
+            </h3>
+            <p class="paper-abs">
+              3,466 field photographs of Bangladeshi paper currency, annotated for detection in YOLO
+              format with bounding boxes and nine denomination classes. It covers both the older
+              circulating series and the 2025–26 architecture series, with fixed 80:10:10 splits.
+            </p>
+            <dl class="paper-findings">
+              <div>
+                <dt>Annotated images</dt>
+                <dd>3,466</dd>
+              </div>
+              <div>
+                <dt>Denominations</dt>
+                <dd>9 <span>from 2 to 1,000 Taka, across two series</span></dd>
+              </div>
+            </dl>
+            <p class="paper-note">
+              Released under CC BY 4.0 with versioned split manifests, so benchmarks on it can be
+              reproduced.
+            </p>
+            <div class="paper-links">
+              <a href="https://data.mendeley.com/datasets/33vjwcrpjj/1" target="_blank" rel="noopener">View dataset</a>
+              <button type="button" class="copy-btn" data-cite="Ahmed, S. M. M. U., Chowdhury, M. A., &amp; Riyan, T. I. (2026). BD-BANKNOTES: A Multi-Series Annotated Dataset of Bangladeshi Banknotes for Object Detection (Version 1) [Data set]. Mendeley Data. https://doi.org/10.17632/33vjwcrpjj.1">Copy citation</button>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <p class="section-note">
+          Industry work and teaching, most recent first.
+        </p>
+      </div>
+
+      <ul class="work">
+        <li class="work-item">
+          <p class="work-kind">Mar 3, 2026 – Present</p>
+          <div class="work-body">
+            <h3>Software Engineer Intern</h3>
+            <p class="work-org">Samsung R&amp;D Institute Bangladesh</p>
+            <p class="work-org">Connectivity Part, MDE Group, IST</p>
+            <ul class="work-list">
+              <li>Internal agentic tools and coding agents used across the engineering group.</li>
+              <li>Windows applications built in the .NET Framework.</li>
               <li>
-                <strong>BSc in Computer Science & Engineering</strong>
-                <span class="institution">United International University</span>
+                A test suite that runs across an entire device network, driving both
+                wireless and USB&#8209;connected devices.
+              </li>
+              <li>
+                Effortless Onboarding, an on-device AI prototype on smart glasses. Third prize at
+                AI PoC 2026, SRBD's internal competition between engineering groups.
               </li>
             </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-      <div class="section-header">
-        <span class="section-tag">What I Know</span>
-        <h2 class="section-title">Skills &amp; Expertise</h2>
-      </div>
-      <div class="skills-container">
-          <div class="skill-category">
-          <h3 class="category-title">
-            <span class="category-icon"></span>
-            Languages
-          </h3>
-          <div class="skills-grid">
-            <div class="skill-item"><span class="skill-name">C</span></div>
-            <div class="skill-item"><span class="skill-name">C#</span></div>
-            <div class="skill-item"><span class="skill-name">Python</span></div>
-            <div class="skill-item"><span class="skill-name">Java</span></div>
-            <div class="skill-item"><span class="skill-name">Typescript</span></div>
-            <div class="skill-item"><span class="skill-name">Javascript</span></div>
-            <div class="skill-item"><span class="skill-name">SQL</span></div>
-          </div>
-        </div>
-
-
-
-        <div class="skill-category">
-          <h3 class="category-title">
-            <span class="category-icon"></span>
-            Backend Development
-          </h3>
-          <div class="skills-grid">
-            <div class="skill-item"><span class="skill-name">ASP.NET Core</span></div>
-             <div class="skill-item"><span class="skill-name">EF Core</span></div>
-            <div class="skill-item"><span class="skill-name">Node.js</span></div>
-                  <div class="skill-item"><span class="skill-name">FastAPI</span></div>
-               <div class="skill-item"><span class="skill-name">RabbitMQ</span></div>
-        
-          </div>
-        </div>
-
-      
-
-        <div class="skill-category">
-          <h3 class="category-title">
-            <span class="category-icon"></span>
-            Databases
-          </h3>
-          <div class="skills-grid">
-            <div class="skill-item"><span class="skill-name">MySQL</span></div>
-            <div class="skill-item"><span class="skill-name">PostgreSQL</span></div>
-            <div class="skill-item"><span class="skill-name">MongoDB</span></div>
-            <div class="skill-item"><span class="skill-name">Redis</span></div>
-                  <div class="skill-item"><span class="skill-name">VectorDB</span></div>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <h3 class="category-title">
-            <span class="category-icon"></span>
-            DevOps &amp; Cloud
-          </h3>
-          <div class="skills-grid">
-            <div class="skill-item"><span class="skill-name">AWS</span></div>
-            <div class="skill-item"><span class="skill-name">Docker</span></div>
-            <div class="skill-item"><span class="skill-name">Kubernetes</span></div>
-            <div class="skill-item"><span class="skill-name">Git</span></div>
-            <div class="skill-item"><span class="skill-name">GitHub</span></div>
-            <div class="skill-item"><span class="skill-name">GitHub Actions</span></div>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <h3 class="category-title">
-            <span class="category-icon"></span>
-            AI &amp; Data Science
-          </h3>
-          <div class="skills-grid">
-            <div class="skill-item"><span class="skill-name">Machine Learning</span></div>
-            <div class="skill-item"><span class="skill-name">NLP</span></div>
-            <div class="skill-item"><span class="skill-name">Computer Vision</span></div>
-            <div class="skill-item"><span class="skill-name">PyTorch</span></div>
-            <div class="skill-item"><span class="skill-name">TensorFlow</span></div>
-            <div class="skill-item"><span class="skill-name">Pandas</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experiences" class="section">
-      <div class="section-header">
-        <span class="section-tag">Work History</span>
-        <h2 class="section-title">Experience</h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">Present</span>
-            <h3 class="timeline-title">Undergraduate Teaching Assistant</h3>
-            <p class="timeline-company">United International University</p>
-            <p class="timeline-desc">
-              Assisting faculty in teaching undergraduate courses, supporting students in understanding core 
-              computer science and data science concepts, helping with lab sessions and assignments, and 
-              providing one-on-one mentoring to students.
+            <p class="work-note">
+              The Connectivity part builds the Windows Quick Share, Multi Control Framework (MCF),
+              Storage Share, Camera Share and Nearby Device features.
             </p>
           </div>
+        </li>
+
+        <li class="work-item">
+          <p class="work-kind">Jan 2025 – Present</p>
+          <div class="work-body">
+            <h3>Senior Backend Engineer</h3>
+            <p class="work-org">Fazesoft</p>
+            <p class="work-org">Remote</p>
+            <p class="work-desc">
+              Backend engineering on production systems, including HomeNet, BaazarLTD, Passtid
+              and other client platforms.
+            </p>
+            <a class="work-link" href="https://www.linkedin.com/company/fazesoft/posts/" target="_blank" rel="noopener">Fazesoft on LinkedIn</a>
+          </div>
+        </li>
+
+        <li class="work-item">
+          <p class="work-kind">Sep 2024 – Jan 2026</p>
+          <div class="work-body">
+            <h3>Undergraduate Teaching Assistant</h3>
+            <p class="work-org">United International University</p>
+            <p class="work-desc">
+              Lab sessions, assignment support and one-to-one mentoring for core computer science
+              and data science courses.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p class="section-note">
+          Platforms and models I designed and built.
+        </p>
+      </div>
+
+      <ul class="work">
+        <li class="work-item">
+          <p class="work-kind">Marketplace platform</p>
+          <div class="work-body">
+            <h3><a href="https://www.homenetbd.com/" target="_blank" rel="noopener">HomeNet</a></h3>
+            <p class="work-desc">
+              A property marketplace for Bangladesh: map-based search, verified listings, and an AI
+              listing assistant that turns a plain-language description into a structured listing.
+              I am the system architect and lead backend engineer on the platform.
+            </p>
+            <p class="work-stack">System architecture, backend, AI search</p>
+            <a class="work-link" href="https://www.homenetbd.com/" target="_blank" rel="noopener">homenetbd.com</a>
+          </div>
+        </li>
+
+        <li class="work-item">
+          <p class="work-kind">Coding agent</p>
+          <div class="work-body">
+            <h3><a href="https://github.com/hrid0yyy/liteagent" target="_blank" rel="noopener">LiteAgent</a></h3>
+            <p class="work-desc">
+              A coding agent built for smaller models running on a local machine. Current agentic
+              systems carry very large system prompts and tool collections, which are heavy for small
+              models and make them hallucinate; this one keeps both deliberately small, so a local
+              model can handle the user's coding tasks without leaning on a cloud subscription.
+            </p>
+            <p class="work-stack">Python, LangGraph, local LLMs</p>
+            <a class="work-link" href="https://github.com/hrid0yyy/liteagent" target="_blank" rel="noopener">Source</a>
+          </div>
+        </li>
+
+        <li class="work-item">
+          <p class="work-kind">Agent tooling</p>
+          <div class="work-body">
+            <h3><a href="https://github.com/hrid0yyy/CodeShare" target="_blank" rel="noopener">CodeShare</a></h3>
+            <p class="work-desc">
+              Peer-to-peer file sharing over a local network, built to be driven by agents through
+              MCP. An agent discovers the other people on the network by itself and sends the files a
+              prompt asks for, rather than someone doing it by hand. A WPF app covers the manual case.
+            </p>
+            <p class="work-stack">.NET, C#, WPF, mDNS, MCP</p>
+            <a class="work-link" href="https://github.com/hrid0yyy/CodeShare" target="_blank" rel="noopener">Source</a>
+          </div>
+        </li>
+        <li class="work-item">
+          <p class="work-kind">Speech recognition</p>
+          <div class="work-body">
+            <h3><a href="https://huggingface.co/hrid0yyy/BornoNet" target="_blank" rel="noopener">BornoNet</a></h3>
+            <p class="work-desc">
+              A fine-tuned Wav2Vec2 model that classifies Bengali speech into roughly fifty
+              characters, at about 87.5% test accuracy. Trained, evaluated and served on Hugging Face.
+            </p>
+            <p class="work-stack">PyTorch, Wav2Vec2, Hugging Face</p>
+            <a class="work-link" href="https://huggingface.co/hrid0yyy/BornoNet" target="_blank" rel="noopener">Model card</a>
+          </div>
+        </li>
+
+        <li class="work-item">
+          <p class="work-kind">Retrieval</p>
+          <div class="work-body">
+            <h3><a href="https://github.com/hrid0yyy/RAGQNA" target="_blank" rel="noopener">RAGQNA</a></h3>
+            <p class="work-desc">
+              Retrieval-augmented question answering over a document collection: chunking and
+              embedding, nearest-neighbour retrieval, then an answer grounded in the returned passages.
+            </p>
+            <p class="work-stack">RAG, vector search, LLM APIs</p>
+            <a class="work-link" href="https://github.com/hrid0yyy/RAGQNA" target="_blank" rel="noopener">Source</a>
+          </div>
+        </li>
+
+        <li class="work-item">
+          <p class="work-kind">Mobile app</p>
+          <div class="work-body">
+            <h3><a href="https://github.com/hrid0yyy/shelft-to-tales" target="_blank" rel="noopener">Shelf to Tales</a></h3>
+            <p class="work-desc">
+              A bookstore app with authentication, a catalogue, a cart and order management,
+              built on React Native and Supabase.
+            </p>
+            <p class="work-stack">React Native, Supabase</p>
+            <a class="work-link" href="https://github.com/hrid0yyy/shelft-to-tales" target="_blank" rel="noopener">Source</a>
+          </div>
+        </li>
+
+        <li class="work-item">
+          <p class="work-kind">Web platform</p>
+          <div class="work-body">
+            <h3><a href="https://github.com/hrid0yyy/University-Eventmanagement" target="_blank" rel="noopener">University Event Management</a></h3>
+            <p class="work-desc">
+              A club event platform in PHP and MySQL. Club admins create and manage events, forums
+              and announcements; students get one place to find them.
+            </p>
+            <p class="work-stack">PHP, MySQL</p>
+            <a class="work-link" href="https://github.com/hrid0yyy/University-Eventmanagement" target="_blank" rel="noopener">Source</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p class="section-note">
+          What I use, grouped by where it sits in a system.
+        </p>
+      </div>
+
+      <div class="spec">
+        <div class="spec-row">
+          <p class="spec-label">languages</p>
+          <p class="spec-items">C, C#, Python, Java, TypeScript, JavaScript, SQL</p>
+        </div>
+        <div class="spec-row">
+          <p class="spec-label">backend</p>
+          <p class="spec-items">ASP.NET Core, Entity Framework Core, Node.js, FastAPI, RabbitMQ</p>
+        </div>
+        <div class="spec-row">
+          <p class="spec-label">data</p>
+          <p class="spec-items">PostgreSQL, MySQL, MongoDB, Redis, vector databases</p>
+        </div>
+        <div class="spec-row">
+          <p class="spec-label">infrastructure</p>
+          <p class="spec-items">AWS, Docker, Kubernetes, Git, GitHub Actions</p>
+        </div>
+        <div class="spec-row">
+          <p class="spec-label">research</p>
+          <p class="spec-items">PyTorch, TensorFlow, pandas, metric learning, NLP, computer vision</p>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <div class="section-header">
-        <span class="section-tag">Portfolio</span>
-        <h2 class="section-title">Featured Projects</h2>
+    <!-- Background -->
+    <section class="section" id="background">
+      <div class="section-head">
+        <h2>Background</h2>
+        <p class="section-note">
+          Where I studied, and what I practise on the side.
+        </p>
       </div>
-      <div class="projects-grid">
-        <article class="project-card featured">
-          <div class="project-header">
-            <span class="project-type">Machine Learning</span>
-            <div class="project-links">
-              <a href="https://huggingface.co/hrid0yyy/BornoNet" target="_blank" class="project-link-btn" aria-label="View Demo">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-card-title">BornoNet</h3>
-          <p class="project-card-desc">
-            Bengali Speech Recognition Model - A fine-tuned Wav2Vec2 model for classifying Bengali speech 
-            into ~50 unique characters. Achieved ~87.5% test accuracy. Deployed on Hugging Face.
-          </p>
-          <div class="project-tags">
-            <span class="tag">PyTorch</span>
-            <span class="tag">Wav2Vec2</span>
-            <span class="tag">Hugging Face</span>
-          </div>
-        </article>
 
-        <article class="project-card">
-          <div class="project-header">
-            <span class="project-type">NLP / AI</span>
-            <div class="project-links">
-              <a href="https://github.com/hrid0yyy/RAGQNA" target="_blank" class="project-link-btn" aria-label="View Source">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-card-title">RAGQNA</h3>
-          <p class="project-card-desc">
-            RAG-based Question Answering System - A sophisticated Retrieval Augmented Generation system 
-            combining document retrieval with LLM capabilities.
+      <div class="records">
+        <div class="record">
+          <h3>Education</h3>
+          <p><strong>BSc in Computer Science &amp; Engineering</strong><br>United International University</p>
+        </div>
+        <div class="record">
+          <h3>Practice</h3>
+          <p><strong>Competitive programming</strong><br>LeetCode, Codeforces</p>
+          <p class="record-note">
+            Over a hundred problems solved on LeetCode, and regular Codeforces rounds, mostly for
+            the habit of writing code that is checked.
           </p>
-          <div class="project-tags">
-            <span class="tag">RAG</span>
-            <span class="tag">LLM</span>
-            <span class="tag">NLP</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-header">
-            <span class="project-type">Mobile App</span>
-            <div class="project-links">
-              <a href="https://github.com/hrid0yyy/shelft-to-tales" target="_blank" class="project-link-btn" aria-label="View Source">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-card-title">Shelf To Tales</h3>
-          <p class="project-card-desc">
-            Online Bookstore App built with React Native and Supabase. Features authentication, 
-            book catalog, cart, and order management.
-          </p>
-          <div class="project-tags">
-            <span class="tag">React Native</span>
-            <span class="tag">Supabase</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-header">
-            <span class="project-type">Web Development</span>
-            <div class="project-links">
-              <a href="https://github.com/hrid0yyy/University-Eventmanagement" target="_blank" class="project-link-btn" aria-label="View Source">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-card-title">Event Management Platform</h3>
-          <p class="project-card-desc">
-            University Club Event Platform using PHP. Enables club admins to create/manage 
-            events, forums, and announcements.
-          </p>
-          <div class="project-tags">
-            <span class="tag">PHP</span>
-            <span class="tag">MySQL</span>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="section-header">
-        <span class="section-tag">Get In Touch</span>
-        <h2 class="section-title">Contact Me</h2>
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p class="section-note">
+          Open to research collaborations and software engineering roles. Email is the fastest route.
+        </p>
       </div>
-      <div class="contact-container">
-        <div class="contact-info">
-          <p class="contact-intro">
-            I'm currently looking for new opportunities. Whether you have a question, 
-            a project idea, or just want to say hi, feel free to reach out!
-          </p>
-          <div class="social-links">
-            <a href="https://github.com/hrid0yyy" target="_blank" class="social-link" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.45.11-3.02 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 2.92-.39c.99.01 1.99.13 2.92.39 2.22-1.49 3.2-1.18 3.2-1.18.63 1.57.23 2.73.11 3.02.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.79 1.09.79 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.67.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/>
-              </svg>
-              <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/smmua/" target="_blank" class="social-link" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm15.5 11.27h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.76 1.37-1.56 2.82-1.56 3.01 0 3.57 1.98 3.57 4.56v5.64z"/>
-              </svg>
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://leetcode.com/u/hrid0yy/" target="_blank" class="social-link" aria-label="LeetCode">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.055 5.055 0 0 0-2.445-1.337l2.467-2.503c.516-.514.498-1.366-.037-1.901-.535-.535-1.387-.552-1.902-.038l-10.1 10.101c-.981.982-1.494 2.337-1.494 3.835 0 1.498.513 2.895 1.494 3.875l4.347 4.361c.981.979 2.337 1.452 3.834 1.452s2.853-.512 3.835-1.494l2.609-2.637c.514-.514.496-1.365-.039-1.9s-1.386-.553-1.899-.039zM20.811 13.01H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z"/>
-              </svg>
-              <span>LeetCode</span>
-            </a>
-            <a href="https://codeforces.com/profile/hrid00y" target="_blank" class="social-link" aria-label="Codeforces">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                <path d="M4.5 7.5C5.328 7.5 6 8.172 6 9v10.5c0 .828-.672 1.5-1.5 1.5S3 20.328 3 19.5V9c0-.828.672-1.5 1.5-1.5zm15 0C20.328 7.5 21 8.172 21 9v10.5c0 .828-.672 1.5-1.5 1.5S18 20.328 18 19.5V9c0-.828.672-1.5 1.5-1.5zM12 3c.828 0 1.5.672 1.5 1.5v15c0 .828-.672 1.5-1.5 1.5s-1.5-.672-1.5-1.5v-15C10.5 3.672 11.172 3 12 3z"/>
-              </svg>
-              <span>Codeforces</span>
-            </a>
-            <a href="https://www.hackerrank.com/profile/hridoyahmed4141" target="_blank" class="social-link" aria-label="HackerRank">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                <path d="M12 0c1.285 0 9.75 4.886 10.392 6 .645 1.115.645 10.885 0 12S13.287 24 12 24s-9.75-4.885-10.395-6c-.641-1.115-.641-10.885 0-12C2.25 4.886 10.715 0 12 0zm2.295 6.799c-.141 0-.258.115-.258.258v3.875H9.963V6.908h.701c.141 0 .254-.115.254-.258 0-.094-.049-.176-.123-.221L9.223 4.92c-.049-.063-.141-.109-.226-.109-.084 0-.16.045-.207.107L7.27 6.434c-.061.049-.1.125-.1.218 0 .141.109.258.254.258h.549v9.592H7.27c-.143 0-.26.115-.26.258 0 .094.051.174.125.221l1.574 1.51c.046.061.14.107.223.107.086 0 .162-.045.209-.107l1.521-1.506c.063-.047.104-.127.104-.219 0-.143-.115-.258-.258-.258h-.549V13.25h4.078v3.463h-.703c-.141 0-.254.115-.254.258 0 .094.047.174.123.219l1.572 1.51c.047.063.141.109.227.109.082 0 .158-.045.205-.107l1.522-1.506c.063-.047.102-.127.102-.219 0-.143-.113-.258-.256-.258h-.551V6.908h.703c.143 0 .256-.115.256-.258 0-.094-.049-.174-.123-.219l-1.576-1.51c-.045-.063-.139-.109-.223-.109-.086 0-.16.045-.207.107l-1.52 1.506c-.064.049-.102.125-.102.218 0 .143.113.258.256.258h.551z"/>
-              </svg>
-              <span>HackerRank</span>
-            </a>
-          </div>
+
+      <div class="contact">
+        <div class="contact-direct">
+          <a class="mail" href="mailto:hridoyahmedddd@gmail.com">hridoyahmedddd@gmail.com</a>
+          <ul class="socials">
+            <li><a href="https://scholar.google.com/citations?user=9v4JzRoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+            <li><a href="https://orcid.org/0009-0000-5961-745X" target="_blank" rel="noopener">ORCID</a></li>
+            <li><a href="https://github.com/hrid0yyy" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/smmua/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://leetcode.com/u/hrid0yy/" target="_blank" rel="noopener">LeetCode</a></li>
+            <li><a href="https://codeforces.com/profile/hrid00y" target="_blank" rel="noopener">Codeforces</a></li>
+            <li><a href="https://www.hackerrank.com/profile/hridoyahmed4141" target="_blank" rel="noopener">HackerRank</a></li>
+          </ul>
         </div>
-        <form class="contact-form">
-          <div class="form-group">
-            <input type="text" name="name" id="name" placeholder=" " required>
-            <label for="name">Your Name</label>
+
+        <form class="contact-form" method="POST" action="https://formspree.io/f/mqabpdla" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" name="name" id="name" autocomplete="name" required>
           </div>
-          <div class="form-group">
-            <input type="email" name="email" id="email" placeholder=" " required>
-            <label for="email">Your Email</label>
+          <div class="field">
+            <label for="email">Your email</label>
+            <input type="email" name="email" id="email" autocomplete="email" required>
           </div>
-          <div class="form-group">
-            <textarea name="message" id="message" placeholder=" " rows="5" required></textarea>
-            <label for="message">Your Message</label>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="4" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-submit">
-            <span>Send Message</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-              <line x1="22" y1="2" x2="11" y2="13"></line>
-              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-            </svg>
-          </button>
+          <div class="form-foot">
+            <button type="submit" class="btn">Send message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </div>
         </form>
       </div>
     </section>
-  </div>
+  </main>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="#home" class="nav-item active" data-tooltip="Home">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-      </svg>
-    </a>
-    <a href="#about" class="nav-item" data-tooltip="About">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-      </svg>
-    </a>
-    <a href="#skills" class="nav-item" data-tooltip="Skills">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-      </svg>
-    </a>
-    <a href="#projects" class="nav-item" data-tooltip="Projects">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-      </svg>
-    </a>
-    <a href="#contact" class="nav-item" data-tooltip="Contact">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-      </svg>
-    </a>
-  </nav>
-
-  <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2026 S. M. Mahbub Uddin Ahmed. All rights reserved.</p>
+    <p>&copy; <span id="year">2026</span> S. M. Mahbub Uddin Ahmed</p>
   </footer>
 </body>
 </html>
