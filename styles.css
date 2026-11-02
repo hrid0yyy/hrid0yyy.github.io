@@ -179,10 +179,13 @@ a:hover { text-decoration-color: currentColor; }
   height: 34px;
   padding: 0 10px;
   font-family: var(--mono);
+  flex: none;
   font-size: 0.72rem;
   letter-spacing: 0.04em;
   line-height: 1;
   color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
   border: 1px solid var(--rule);
   border-radius: 2px;
 }
@@ -769,9 +772,47 @@ a:hover { text-decoration-color: currentColor; }
    Responsive
    --------------------------------------------------------------- */
 
+/* Compact header: name + CV + theme on one row, sections on a single
+   swipeable row underneath. Kicks in before the full nav runs out of room. */
+@media (max-width: 920px) {
+  html { scroll-padding-top: 108px; }
+
+  .topbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 4px;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+  .topbar-right { display: contents; }
+
+  .wordmark {
+    grid-column: 1;
+    grid-row: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .nav-cv { grid-column: 2; grid-row: 1; }
+  .theme-toggle { grid-column: 3; grid-row: 1; }
+
+  .nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    gap: 22px;
+    margin-inline: calc(var(--gutter) * -1);
+    padding: 4px var(--gutter) 8px;
+    scroll-padding-inline: var(--gutter);
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 var(--gutter), #000 calc(100% - var(--gutter)), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 var(--gutter), #000 calc(100% - var(--gutter)), transparent 100%);
+  }
+  .nav-link { font-size: 0.9rem; padding: 4px 0; }
+}
+
 @media (max-width: 900px) {
-  .plate-inner { grid-template-columns: 1fr; align-items: start; }
-  .plate-figure { max-width: 300px; }
+  .plate-inner { grid-template-columns: minmax(0, 1fr) minmax(200px, 260px); }
   .plate-name { max-width: 18ch; }
   .section-head { grid-template-columns: 1fr; gap: 10px; }
   .records { grid-template-columns: 1fr; gap: 28px; }
@@ -781,22 +822,9 @@ a:hover { text-decoration-color: currentColor; }
 @media (max-width: 680px) {
   body { font-size: 17px; }
 
-  .topbar {
-    position: sticky;
-    height: auto;
-    padding-block: 10px;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-  }
-  .theme-toggle {
-    position: absolute;
-    top: 9px;
-    right: var(--gutter);
-  }
-  .topbar-right { flex-direction: column; align-items: stretch; gap: 4px; }
-  .nav { width: 100%; gap: 14px 18px; flex-wrap: wrap; padding-bottom: 2px; }
-  .nav-link { font-size: 0.88rem; }
+  .plate-inner { grid-template-columns: 1fr; }
+  .plate-figure { width: 100%; max-width: 340px; }
+  .plate-name { font-size: clamp(2.2rem, 11vw, 2.9rem); }
 
   .papers > li,
   .work > li,

@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function () {
     .filter(Boolean);
 
   if (targets.length) {
+    const nav = document.querySelector('.nav');
+    let lastActive = -1;
     let ticking = false;
 
     function updateActive() {
@@ -73,6 +75,19 @@ document.addEventListener('DOMContentLoaded', function () {
         if (i === current) link.setAttribute('aria-current', 'true');
         else link.removeAttribute('aria-current');
       });
+
+      // On narrow screens the nav scrolls sideways: keep the current link in view.
+      if (nav && current !== lastActive && nav.scrollWidth > nav.clientWidth) {
+        const link = navLinks[current];
+        let left = 0;
+        if (link) {
+          const l = link.getBoundingClientRect();
+          const n = nav.getBoundingClientRect();
+          left = nav.scrollLeft + (l.left - n.left) - (nav.clientWidth - l.width) / 2;
+        }
+        nav.scrollTo({ left: Math.max(0, left), behavior: prefersReduced ? 'auto' : 'smooth' });
+      }
+      lastActive = current;
 
       ticking = false;
     }
