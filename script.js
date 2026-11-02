@@ -103,6 +103,27 @@ document.addEventListener('DOMContentLoaded', function () {
     updateActive();
   }
 
+  /* ---------- Floating message button ---------- */
+  const fab = document.querySelector('.fab');
+  const contact = document.getElementById('contact');
+
+  if (fab && contact) {
+    // Hide it while the contact section is already on screen.
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver((entries) => {
+        entries.forEach(entry => fab.classList.toggle('is-hidden', entry.isIntersecting));
+      }, { rootMargin: '0px 0px -25% 0px' }).observe(contact);
+    }
+
+    // After the jump, put the cursor in the form, but only with a mouse or
+    // trackpad: on touch screens that would throw up the keyboard uninvited.
+    fab.addEventListener('click', function () {
+      if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+      const field = document.getElementById('name');
+      if (field) setTimeout(() => field.focus({ preventScroll: true }), prefersReduced ? 0 : 600);
+    });
+  }
+
   /* ---------- One reveal per section, never on the hero ---------- */
   if (!prefersReduced && 'IntersectionObserver' in window) {
     const blocks = document.querySelectorAll(
