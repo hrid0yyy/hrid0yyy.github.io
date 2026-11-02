@@ -1,0 +1,3 @@
+# LaTeX sources for the CV live outside the site build.
+# The rendered PDF is committed at the repository root instead.
+cv/
