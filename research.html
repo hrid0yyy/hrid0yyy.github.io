@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research — S. M. Mahbub Uddin Ahmed</title>
+  <meta name="description" content="Papers and datasets by S. M. Mahbub Uddin Ahmed: few-shot virus classification, foundation models against simple baselines, and the BD-BANKNOTES dataset.">
+  <meta name="theme-color" content="#f3f3ef">
+  <script>
+    // Set the theme before first paint so there is no flash of the wrong one.
+    (function () {
+      var theme = 'light';
+      try {
+        var stored = localStorage.getItem('theme');
+        theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      } catch (e) { /* storage blocked: keep light */ }
+      document.documentElement.setAttribute('data-theme', theme);
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', theme === 'dark' ? '#121513' : '#f3f3ef');
+    })();
+  </script>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Research — S. M. Mahbub Uddin Ahmed">
+  <meta property="og:description" content="Papers and datasets by S. M. Mahbub Uddin Ahmed: few-shot virus classification, foundation models against simple baselines, and the BD-BANKNOTES dataset.">
+  <meta property="og:image" content="about-pic.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=6">
+  <script src="script.js?v=6" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <a class="wordmark" href="index.html">S. M. Mahbub Uddin Ahmed</a>
+    <div class="topbar-right">
+      <nav class="nav" aria-label="Sections">
+        <a class="nav-link is-active" href="research.html" aria-current="page">Research</a>
+        <a class="nav-link" href="index.html#experience">Experience</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="index.html#skills">Skills</a>
+        <a class="nav-link" href="index.html#background">Background</a>
+        <a class="nav-link" href="index.html#contact">Contact</a>
+      </nav>
+      <a class="nav-cv" href="S-M-Mahbub-Uddin-Ahmed-CV.pdf" target="_blank" rel="noopener">CV</a>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme">
+        <svg class="icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="icon icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <main id="main">
+    <header class="page-head">
+      <div class="page-head-inner">
+        <p class="page-crumb"><a href="index.html">S. M. Mahbub Uddin Ahmed</a> / Research</p>
+        <h1 class="page-title">Research</h1>
+        <p class="page-lede">
+          Papers and datasets, newest first. Each entry gives the headline result, the caveat that
+          goes with it, and a citation you can copy.
+        </p>
+        <p class="section-links">
+          <a href="https://scholar.google.com/citations?user=9v4JzRoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://orcid.org/0009-0000-5961-745X" target="_blank" rel="noopener">ORCID 0009-0000-5961-745X</a>
+        </p>
+      </div>
+    </header>
+
+    <section class="section" id="papers">
+      <div class="section-head">
+        <h2>Papers</h2>
+        <p class="section-note">Preprints, with code for every result.</p>
+      </div>
+
+      <ol class="papers">
+        <li class="paper">
+          <div class="paper-meta">
+            <span>Preprint</span>
+            <span>SSRN 7664934</span>
+            <span>2026</span>
+          </div>
+          <div class="paper-body">
+            <h3 class="paper-title">
+              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7664934" target="_blank" rel="noopener">
+                Few-shot classification of rare viruses in transmission electron microscopy images using Siamese neural networks
+              </a>
+            </h3>
+            <p class="paper-abs">
+              Rare viruses come with five to twenty-five micrographs and no trained model. I train a
+              Siamese encoder on the fourteen common classes of the public TEM virus dataset, then add
+              the eight rare classes only at test time, as class prototypes. The encoder never sees them.
+            </p>
+            <dl class="paper-findings">
+              <div>
+                <dt>14-class test accuracy</dt>
+                <dd>94.8%</dd>
+              </div>
+              <div>
+                <dt>Unseen rare classes, one shot</dt>
+                <dd>37.3% <span>against 30.8% for the re-trained baseline</span></dd>
+              </div>
+            </dl>
+            <p class="paper-note">
+              At five shots the baseline edges ahead (67.9% against 64.6%). The gain is in the
+              one-shot regime, and the paper reports it that way.
+            </p>
+            <div class="paper-links">
+              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7664934" target="_blank" rel="noopener">Read preprint</a>
+              <a href="https://github.com/hrid0yyy/tem-virus-siamese-fewshot" target="_blank" rel="noopener">Code and manuscript</a>
+              <button type="button" class="copy-btn" data-cite="Ahmed, S. M. M. U. (2026). Few-shot classification of rare viruses in transmission electron microscopy images using Siamese neural networks [Preprint]. SSRN 7664934. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7664934">Copy citation</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="paper">
+          <div class="paper-meta">
+            <span>Preprint</span>
+            <span>arXiv 2610.15029</span>
+            <span>2026</span>
+          </div>
+          <div class="paper-body">
+            <h3 class="paper-title">
+              <a href="https://arxiv.org/abs/2610.15029" target="_blank" rel="noopener">
+                Is a 9B decision foundation model needed for symptom-to-disease classification? Fine-tuning Clef-Flash against TF&#8209;IDF baselines
+              </a>
+            </h3>
+            <p class="paper-abs">
+              Clef-Flash is a 9B decision foundation model. I fine-tune it with 4-bit QLoRA on the
+              twenty-four-class Symptom2Disease set, then train TF&#8209;IDF linear baselines on exactly the
+              same stratified split. A leave-one-symptom-out ablation on four narratives shows which
+              clause carried each prediction.
+            </p>
+            <dl class="paper-findings">
+              <div>
+                <dt>Clef-Flash, after QLoRA</dt>
+                <dd>95.4% <span>from 65.0% zero-shot</span></dd>
+              </div>
+              <div>
+                <dt>TF&#8209;IDF with a linear SVM</dt>
+                <dd>98.8% <span>at 0.7 ms per record on a laptop CPU</span></dd>
+              </div>
+            </dl>
+            <p class="paper-note">
+              On short, keyword-rich narratives the 9B model offers no accuracy advantage. That is the
+              finding, not a failed training run.
+            </p>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2610.15029" target="_blank" rel="noopener">Read on arXiv</a>
+              <a href="https://github.com/hrid0yyy/clef-clinical-triage" target="_blank" rel="noopener">Code and results</a>
+              <button type="button" class="copy-btn" data-cite="Ahmed, S. M. M. U. (2026). Is a 9B Decision Foundation Model Needed for Symptom-to-Disease Classification? Fine-Tuning Clef-Flash Against TF-IDF Baselines (arXiv:2610.15029). arXiv. https://arxiv.org/abs/2610.15029">Copy citation</button>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="datasets">
+      <div class="section-head">
+        <h2>Datasets</h2>
+        <p class="section-note">Released openly, with fixed splits so results on them can be compared.</p>
+      </div>
+
+      <ol class="papers">
+        <li class="paper">
+          <div class="paper-meta">
+            <span>Dataset</span>
+            <span>DOI 10.17632/33vjwcrpjj.1</span>
+            <span>2026</span>
+          </div>
+          <div class="paper-body">
+            <h3 class="paper-title">
+              <a href="https://data.mendeley.com/datasets/33vjwcrpjj/1" target="_blank" rel="noopener">
+                BD-BANKNOTES: a multi-series annotated dataset of Bangladeshi banknotes for object detection
+              </a>
+            </h3>
+            <p class="paper-abs">
+              3,466 field photographs of Bangladeshi paper currency, annotated for detection in YOLO
+              format with bounding boxes and nine denomination classes. It covers both the older
+              circulating series and the 2025–26 architecture series, with fixed 80:10:10 splits.
+            </p>
+            <dl class="paper-findings">
+              <div>
+                <dt>Annotated images</dt>
+                <dd>3,466</dd>
+              </div>
+              <div>
+                <dt>Denominations</dt>
+                <dd>9 <span>from 2 to 1,000 Taka, across two series</span></dd>
+              </div>
+            </dl>
+            <p class="paper-note">
+              Released under CC BY 4.0 with versioned split manifests, so benchmarks on it can be
+              reproduced.
+            </p>
+            <div class="paper-links">
+              <a href="https://data.mendeley.com/datasets/33vjwcrpjj/1" target="_blank" rel="noopener">View dataset</a>
+              <button type="button" class="copy-btn" data-cite="Ahmed, S. M. M. U., Chowdhury, M. A., &amp; Riyan, T. I. (2026). BD-BANKNOTES: A Multi-Series Annotated Dataset of Bangladeshi Banknotes for Object Detection (Version 1) [Data set]. Mendeley Data. https://doi.org/10.17632/33vjwcrpjj.1">Copy citation</button>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year">2026</span> S. M. Mahbub Uddin Ahmed</p>
+  </footer>
+
+  <a class="fab" href="index.html#contact" aria-label="Send a message: go to the contact form">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+    <span class="fab-label">Message</span>
+  </a>
+</body>
+</html>

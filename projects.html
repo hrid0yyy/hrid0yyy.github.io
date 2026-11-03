@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — S. M. Mahbub Uddin Ahmed</title>
+  <meta name="description" content="Projects by S. M. Mahbub Uddin Ahmed: HomeNet, LiteAgent, CodeShare, BornoNet and more.">
+  <meta name="theme-color" content="#f3f3ef">
+  <script>
+    // Set the theme before first paint so there is no flash of the wrong one.
+    (function () {
+      var theme = 'light';
+      try {
+        var stored = localStorage.getItem('theme');
+        theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      } catch (e) { /* storage blocked: keep light */ }
+      document.documentElement.setAttribute('data-theme', theme);
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', theme === 'dark' ? '#121513' : '#f3f3ef');
+    })();
+  </script>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects — S. M. Mahbub Uddin Ahmed">
+  <meta property="og:description" content="Projects by S. M. Mahbub Uddin Ahmed: HomeNet, LiteAgent, CodeShare, BornoNet and more.">
+  <meta property="og:image" content="about-pic.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=6">
+  <script src="script.js?v=6" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <a class="wordmark" href="index.html">S. M. Mahbub Uddin Ahmed</a>
+    <div class="topbar-right">
+      <nav class="nav" aria-label="Sections">
+        <a class="nav-link" href="research.html">Research</a>
+        <a class="nav-link" href="index.html#experience">Experience</a>
+        <a class="nav-link is-active" href="projects.html" aria-current="page">Projects</a>
+        <a class="nav-link" href="index.html#skills">Skills</a>
+        <a class="nav-link" href="index.html#background">Background</a>
+        <a class="nav-link" href="index.html#contact">Contact</a>
+      </nav>
+      <a class="nav-cv" href="S-M-Mahbub-Uddin-Ahmed-CV.pdf" target="_blank" rel="noopener">CV</a>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme">
+        <svg class="icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="icon icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <main id="main">
+    <header class="page-head">
+      <div class="page-head-inner">
+        <p class="page-crumb"><a href="index.html">S. M. Mahbub Uddin Ahmed</a> / Projects</p>
+        <h1 class="page-title">Projects</h1>
+        <p class="page-lede">
+          Platforms, agents and models I designed and built, from production systems to coursework.
+        </p>
+        <p class="section-links">
+          <a href="https://github.com/hrid0yyy" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://huggingface.co/hrid0yyy" target="_blank" rel="noopener">Hugging Face</a>
+        </p>
+      </div>
+    </header>
+
+    <section class="section" id="all-projects">
+      <ul class="work">
+        <li class="work-item">
+          <p class="work-kind">Marketplace platform</p>
+          <div class="work-body">
+            <h3><a href="https://www.homenetbd.com/" target="_blank" rel="noopener">HomeNet</a></h3>
+            <p class="work-desc">
+              A property marketplace for Bangladesh: map-based search, verified listings, and an AI
+              listing assistant that turns a plain-language description into a structured listing.
+              I am the system architect and lead backend engineer on the platform.
+            </p>
+            <p class="work-stack">System architecture, backend, AI search</p>
+            <a class="work-link" href="https://www.homenetbd.com/" target="_blank" rel="noopener">homenetbd.com</a>
+          </div>
+        </li>
+
+        <li class="work-item">
+          <p class="work-kind">Coding agent</p>
+          <div class="work-body">
+            <h3><a href="https://github.com/hrid0yyy/liteagent" target="_blank" rel="noopener">LiteAgent</a></h3>
+            <p class="work-desc">
+              A coding agent built for smaller models running on a local machine. Current agentic
+              systems carry very large system prompts and tool collections, which are heavy for small
+              models and make them hallucinate; this one keeps both deliberately small, so a local
+              model can handle the user's coding tasks without leaning on a cloud subscription.
+            </p>
+            <p class="work-stack">Python, LangGraph, local LLMs</p>
+            <a class="work-link" href="https://github.com/hrid0yyy/liteagent" target="_blank" rel="noopener">Source</a>
+          </div>
+        </li>
+
+        <li class="work-item">
+          <p class="work-kind">Agent tooling</p>
+          <div class="work-body">
+            <h3><a href="https://github.com/hrid0yyy/CodeShare" target="_blank" rel="noopener">CodeShare</a></h3>
+            <p class="work-desc">
+              Peer-to-peer file sharing over a local network, built to be driven by agents through
+              MCP. An agent discovers the other people on the network by itself and sends the files a
+              prompt asks for, rather than someone doing it by hand. A WPF app covers the manual case.
+            </p>
+            <p class="work-stack">.NET, C#, WPF, mDNS, MCP</p>
+            <a class="work-link" href="https://github.com/hrid0yyy/CodeShare" target="_blank" rel="noopener">Source</a>
+          </div>
+        </li>
+
+        <li class="work-item">
+          <p class="work-kind">Speech recognition</p>
+          <div class="work-body">
+            <h3><a href="https://huggingface.co/hrid0yyy/BornoNet" target="_blank" rel="noopener">BornoNet</a></h3>
+            <p class="work-desc">
+              A fine-tuned Wav2Vec2 model that classifies Bengali speech into roughly fifty
+              characters, at about 87.5% test accuracy. Trained, evaluated and served on Hugging Face.
+            </p>
+            <p class="work-stack">PyTorch, Wav2Vec2, Hugging Face</p>
+            <a class="work-link" href="https://huggingface.co/hrid0yyy/BornoNet" target="_blank" rel="noopener">Model card</a>
+          </div>
+        </li>
+
+        <li class="work-item">
+          <p class="work-kind">Retrieval</p>
+          <div class="work-body">
+            <h3><a href="https://github.com/hrid0yyy/RAGQNA" target="_blank" rel="noopener">RAGQNA</a></h3>
+            <p class="work-desc">
+              Retrieval-augmented question answering over a document collection: chunking and
+              embedding, nearest-neighbour retrieval, then an answer grounded in the returned passages.
+            </p>
+            <p class="work-stack">RAG, vector search, LLM APIs</p>
+            <a class="work-link" href="https://github.com/hrid0yyy/RAGQNA" target="_blank" rel="noopener">Source</a>
+          </div>
+        </li>
+
+        <li class="work-item">
+          <p class="work-kind">Mobile app</p>
+          <div class="work-body">
+            <h3><a href="https://github.com/hrid0yyy/shelft-to-tales" target="_blank" rel="noopener">Shelf to Tales</a></h3>
+            <p class="work-desc">
+              A bookstore app with authentication, a catalogue, a cart and order management,
+              built on React Native and Supabase.
+            </p>
+            <p class="work-stack">React Native, Supabase</p>
+            <a class="work-link" href="https://github.com/hrid0yyy/shelft-to-tales" target="_blank" rel="noopener">Source</a>
+          </div>
+        </li>
+
+        <li class="work-item">
+          <p class="work-kind">Web platform</p>
+          <div class="work-body">
+            <h3><a href="https://github.com/hrid0yyy/University-Eventmanagement" target="_blank" rel="noopener">University Event Management</a></h3>
+            <p class="work-desc">
+              A club event platform in PHP and MySQL. Club admins create and manage events, forums
+              and announcements; students get one place to find them.
+            </p>
+            <p class="work-stack">PHP, MySQL</p>
+            <a class="work-link" href="https://github.com/hrid0yyy/University-Eventmanagement" target="_blank" rel="noopener">Source</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year">2026</span> S. M. Mahbub Uddin Ahmed</p>
+  </footer>
+
+  <a class="fab" href="index.html#contact" aria-label="Send a message: go to the contact form">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+    <span class="fab-label">Message</span>
+  </a>
+</body>
+</html>

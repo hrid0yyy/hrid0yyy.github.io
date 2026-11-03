@@ -27,8 +27,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=5">
-  <script src="script.js?v=5" defer></script>
+  <link rel="stylesheet" href="styles.css?v=6">
+  <script src="script.js?v=6" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -98,7 +98,7 @@
       </div>
 
       <ol class="papers">
-        <li class="paper">
+        <li class="paper paper-compact">
           <div class="paper-meta">
             <span>Preprint</span>
             <span>SSRN 7664934</span>
@@ -110,34 +110,11 @@
                 Few-shot classification of rare viruses in transmission electron microscopy images using Siamese neural networks
               </a>
             </h3>
-            <p class="paper-abs">
-              Rare viruses come with five to twenty-five micrographs and no trained model. I train a
-              Siamese encoder on the fourteen common classes of the public TEM virus dataset, then add
-              the eight rare classes only at test time, as class prototypes. The encoder never sees them.
-            </p>
-            <dl class="paper-findings">
-              <div>
-                <dt>14-class test accuracy</dt>
-                <dd>94.8%</dd>
-              </div>
-              <div>
-                <dt>Unseen rare classes, one shot</dt>
-                <dd>37.3% <span>against 30.8% for the re-trained baseline</span></dd>
-              </div>
-            </dl>
-            <p class="paper-note">
-              At five shots the baseline edges ahead (67.9% against 64.6%). The gain is in the
-              one-shot regime, and the paper reports it that way.
-            </p>
-            <div class="paper-links">
-              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7664934" target="_blank" rel="noopener">Read preprint</a>
-              <a href="https://github.com/hrid0yyy/tem-virus-siamese-fewshot" target="_blank" rel="noopener">Code and manuscript</a>
-              <button type="button" class="copy-btn" data-cite="Ahmed, S. M. M. U. (2026). Few-shot classification of rare viruses in transmission electron microscopy images using Siamese neural networks [Preprint]. SSRN 7664934. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7664934">Copy citation</button>
-            </div>
+            <p class="paper-key">37.3% one-shot accuracy on rare classes the encoder never saw, against 30.8% for the re-trained baseline.</p>
           </div>
         </li>
 
-        <li class="paper">
+        <li class="paper paper-compact">
           <div class="paper-meta">
             <span>Preprint</span>
             <span>arXiv 2610.15029</span>
@@ -149,35 +126,11 @@
                 Is a 9B decision foundation model needed for symptom-to-disease classification? Fine-tuning Clef-Flash against TF&#8209;IDF baselines
               </a>
             </h3>
-            <p class="paper-abs">
-              Clef-Flash is a 9B decision foundation model. I fine-tune it with 4-bit QLoRA on the
-              twenty-four-class Symptom2Disease set, then train TF&#8209;IDF linear baselines on exactly the
-              same stratified split. A leave-one-symptom-out ablation on four narratives shows which
-              clause carried each prediction.
-            </p>
-            <dl class="paper-findings">
-              <div>
-                <dt>Clef-Flash, after QLoRA</dt>
-                <dd>95.4% <span>from 65.0% zero-shot</span></dd>
-              </div>
-              <div>
-                <dt>TF&#8209;IDF with a linear SVM</dt>
-                <dd>98.8% <span>at 0.7 ms per record on a laptop CPU</span></dd>
-              </div>
-            </dl>
-            <p class="paper-note">
-              On short, keyword-rich narratives the 9B model offers no accuracy advantage. That is the
-              finding, not a failed training run.
-            </p>
-            <div class="paper-links">
-              <a href="https://arxiv.org/abs/2610.15029" target="_blank" rel="noopener">Read on arXiv</a>
-              <a href="https://github.com/hrid0yyy/clef-clinical-triage" target="_blank" rel="noopener">Code and results</a>
-              <button type="button" class="copy-btn" data-cite="Ahmed, S. M. M. U. (2026). Is a 9B Decision Foundation Model Needed for Symptom-to-Disease Classification? Fine-Tuning Clef-Flash Against TF-IDF Baselines (arXiv:2610.15029). arXiv. https://arxiv.org/abs/2610.15029">Copy citation</button>
-            </div>
+            <p class="paper-key">A TF&#8209;IDF linear SVM reaches 98.8% at 0.7 ms per record; the QLoRA-tuned 9B model reaches 95.4%.</p>
           </div>
         </li>
 
-        <li class="paper">
+        <li class="paper paper-compact">
           <div class="paper-meta">
             <span>Dataset</span>
             <span>DOI 10.17632/33vjwcrpjj.1</span>
@@ -189,32 +142,12 @@
                 BD-BANKNOTES: a multi-series annotated dataset of Bangladeshi banknotes for object detection
               </a>
             </h3>
-            <p class="paper-abs">
-              3,466 field photographs of Bangladeshi paper currency, annotated for detection in YOLO
-              format with bounding boxes and nine denomination classes. It covers both the older
-              circulating series and the 2025–26 architecture series, with fixed 80:10:10 splits.
-            </p>
-            <dl class="paper-findings">
-              <div>
-                <dt>Annotated images</dt>
-                <dd>3,466</dd>
-              </div>
-              <div>
-                <dt>Denominations</dt>
-                <dd>9 <span>from 2 to 1,000 Taka, across two series</span></dd>
-              </div>
-            </dl>
-            <p class="paper-note">
-              Released under CC BY 4.0 with versioned split manifests, so benchmarks on it can be
-              reproduced.
-            </p>
-            <div class="paper-links">
-              <a href="https://data.mendeley.com/datasets/33vjwcrpjj/1" target="_blank" rel="noopener">View dataset</a>
-              <button type="button" class="copy-btn" data-cite="Ahmed, S. M. M. U., Chowdhury, M. A., &amp; Riyan, T. I. (2026). BD-BANKNOTES: A Multi-Series Annotated Dataset of Bangladeshi Banknotes for Object Detection (Version 1) [Data set]. Mendeley Data. https://doi.org/10.17632/33vjwcrpjj.1">Copy citation</button>
-            </div>
+            <p class="paper-key">3,466 annotated photographs across nine denominations and two note series, under CC BY 4.0.</p>
           </div>
         </li>
       </ol>
+
+      <p class="section-more"><a href="research.html">All research, with abstracts and citations</a></p>
     </section>
 
     <!-- Experience -->
@@ -285,7 +218,7 @@
       <div class="section-head">
         <h2>Projects</h2>
         <p class="section-note">
-          Platforms and models I designed and built.
+          Selected platforms and models I designed and built.
         </p>
       </div>
 
@@ -332,6 +265,7 @@
             <a class="work-link" href="https://github.com/hrid0yyy/CodeShare" target="_blank" rel="noopener">Source</a>
           </div>
         </li>
+
         <li class="work-item">
           <p class="work-kind">Speech recognition</p>
           <div class="work-body">
@@ -344,46 +278,9 @@
             <a class="work-link" href="https://huggingface.co/hrid0yyy/BornoNet" target="_blank" rel="noopener">Model card</a>
           </div>
         </li>
-
-        <li class="work-item">
-          <p class="work-kind">Retrieval</p>
-          <div class="work-body">
-            <h3><a href="https://github.com/hrid0yyy/RAGQNA" target="_blank" rel="noopener">RAGQNA</a></h3>
-            <p class="work-desc">
-              Retrieval-augmented question answering over a document collection: chunking and
-              embedding, nearest-neighbour retrieval, then an answer grounded in the returned passages.
-            </p>
-            <p class="work-stack">RAG, vector search, LLM APIs</p>
-            <a class="work-link" href="https://github.com/hrid0yyy/RAGQNA" target="_blank" rel="noopener">Source</a>
-          </div>
-        </li>
-
-        <li class="work-item">
-          <p class="work-kind">Mobile app</p>
-          <div class="work-body">
-            <h3><a href="https://github.com/hrid0yyy/shelft-to-tales" target="_blank" rel="noopener">Shelf to Tales</a></h3>
-            <p class="work-desc">
-              A bookstore app with authentication, a catalogue, a cart and order management,
-              built on React Native and Supabase.
-            </p>
-            <p class="work-stack">React Native, Supabase</p>
-            <a class="work-link" href="https://github.com/hrid0yyy/shelft-to-tales" target="_blank" rel="noopener">Source</a>
-          </div>
-        </li>
-
-        <li class="work-item">
-          <p class="work-kind">Web platform</p>
-          <div class="work-body">
-            <h3><a href="https://github.com/hrid0yyy/University-Eventmanagement" target="_blank" rel="noopener">University Event Management</a></h3>
-            <p class="work-desc">
-              A club event platform in PHP and MySQL. Club admins create and manage events, forums
-              and announcements; students get one place to find them.
-            </p>
-            <p class="work-stack">PHP, MySQL</p>
-            <a class="work-link" href="https://github.com/hrid0yyy/University-Eventmanagement" target="_blank" rel="noopener">Source</a>
-          </div>
-        </li>
       </ul>
+
+      <p class="section-more"><a href="projects.html">All projects (7)</a></p>
     </section>
 
     <!-- Skills -->
