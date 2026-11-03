@@ -75,10 +75,51 @@
     <section class="section" id="papers">
       <div class="section-head">
         <h2>Papers</h2>
-        <p class="section-note">Preprints, with code for every result.</p>
+        <p class="section-note">Preprints, newest first.</p>
       </div>
 
       <ol class="papers">
+        <li class="paper">
+          <div class="paper-meta">
+            <span>Preprint</span>
+            <span>arXiv 2611.03179</span>
+            <span>2026</span>
+          </div>
+          <div class="paper-body">
+            <h3 class="paper-title">
+              <a href="https://arxiv.org/abs/2611.03179" target="_blank" rel="noopener">
+                Every clause counts: instruction-following reranking by multiplying small, answerable questions
+              </a>
+            </h3>
+            <p class="paper-abs">
+              Search queries often carry instructions, such as pages written for beginners or official
+              sources only, and most rerankers treat them as a few extra words. DMReranker splits an
+              instructed query into a topic and a short list of typed clauses; a small judge model answers
+              one narrow question per clause, and the answer probabilities are multiplied into one score.
+              Nothing is trained, and the configuration was frozen before the test runs.
+            </p>
+            <dl class="paper-findings">
+              <div>
+                <dt>InfoSearch macro WISE</dt>
+                <dd>50.9 <span>against 33.5 for GPT-4o as a list-wise reranker</span></dd>
+              </div>
+              <div>
+                <dt>Original-mode nDCG@10</dt>
+                <dd>82.9 <span>topical relevance kept, on the same top-100 candidates</span></dd>
+              </div>
+            </dl>
+            <p class="paper-note">
+              On the stricter raw-score SICR it trails GPT-4o, 19.2 against 32.1. The paper shows that gap
+              follows from comparing raw probability products across runs; computed from ranks, SICR is
+              67.0. Scoring all six dimensions cost about $10.
+            </p>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2611.03179" target="_blank" rel="noopener">Read on arXiv</a>
+              <button type="button" class="copy-btn" data-cite="Ahmed, S. M. M. U., &amp; Musaddiq, A. A. (2026). Every Clause Counts: Instruction-Following Reranking by Multiplying Small, Answerable Questions (arXiv:2611.03179). arXiv. https://arxiv.org/abs/2611.03179">Copy citation</button>
+            </div>
+          </div>
+        </li>
+
         <li class="paper">
           <div class="paper-meta">
             <span>Preprint</span>
