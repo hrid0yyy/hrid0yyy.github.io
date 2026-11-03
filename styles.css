@@ -287,6 +287,49 @@ a:hover { text-decoration-color: currentColor; }
 }
 
 /* ---------------------------------------------------------------
+   Page head (research.html, projects.html)
+   --------------------------------------------------------------- */
+
+.page-head {
+  background: var(--hero);
+  color: var(--hero-ink);
+  border-bottom: 1px solid var(--rule);
+}
+
+.page-head-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(36px, 4.6vw, 60px) var(--gutter) clamp(32px, 4vw, 48px);
+}
+
+.page-crumb {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--hero-ash);
+  margin-bottom: clamp(14px, 2vw, 20px);
+}
+.page-crumb a { color: inherit; }
+.page-crumb a:hover { color: var(--hero-ink); }
+
+.page-title {
+  font-size: clamp(2.3rem, 5.2vw, 3.8rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.026em;
+}
+
+.page-lede {
+  margin-top: clamp(16px, 2vw, 22px);
+  font-size: clamp(1.02rem, 1.35vw, 1.12rem);
+  line-height: 1.62;
+  color: color-mix(in srgb, var(--hero-ink) 76%, var(--hero));
+  max-width: 58ch;
+}
+
+.page-head .section-links { margin-top: 18px; }
+
+/* ---------------------------------------------------------------
    Section scaffolding
    --------------------------------------------------------------- */
 
@@ -451,6 +494,39 @@ a:hover { text-decoration-color: currentColor; }
 }
 .copy-btn:hover { color: var(--accent); }
 .copy-btn[data-done="true"] { color: var(--accent); text-decoration-color: var(--accent); }
+
+/* Compact entries on the homepage: title and one headline result. */
+.papers > li.paper-compact { padding: clamp(20px, 2.6vw, 28px) 0; }
+
+.paper-key {
+  margin-top: 10px;
+  font-size: 0.99rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 62ch;
+  padding-left: 14px;
+  border-left: 2px solid var(--accent);
+  text-wrap: pretty;
+}
+
+/* "All research" / "All projects" link closing a homepage section. */
+.section-more {
+  display: grid;
+  grid-template-columns: minmax(0, 0.28fr) minmax(0, 0.72fr);
+  gap: clamp(16px, 4vw, 64px);
+  padding-top: clamp(20px, 2.6vw, 28px);
+  border-top: 1px solid var(--rule);
+}
+
+.section-more a {
+  grid-column: 2;
+  justify-self: start;
+  font-size: 1rem;
+  color: var(--ink);
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.section-more a::after { content: " \2192"; }
+.section-more a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 
 /* ---------------------------------------------------------------
    Projects
@@ -873,12 +949,15 @@ a:hover { text-decoration-color: currentColor; }
 
   .papers > li,
   .work > li,
+  .section-more,
   .spec-row {
     grid-template-columns: 1fr;
     gap: 10px;
   }
 
   .papers > li { padding-block: 26px; }
+  .papers > li.paper-compact { padding-block: 22px; }
+  .section-more a { grid-column: 1; }
   .work > li { padding-right: 0; }
 
   .paper-findings { grid-template-columns: 1fr; gap: 14px; }
