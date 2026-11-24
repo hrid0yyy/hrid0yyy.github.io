@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function () {
       setStatus('Sent. I will reply to the address you gave.', 'ok');
     } catch (error) {
       console.error(error);
-      setStatus('That did not send. Email hridoyahmedddd@gmail.com instead.', 'error');
+      setStatus('That did not send. Email sm.mahbub068@gmail.com instead.', 'error');
     } finally {
       submit.textContent = original;
       submit.disabled = false;
